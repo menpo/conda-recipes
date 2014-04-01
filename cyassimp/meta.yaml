@@ -1,0 +1,28 @@
+package:
+  name: cyassimp
+  version: 0.1.2
+
+source:
+  fn: cyassimp-0.1.2.tar.gz
+  url: https://pypi.python.org/packages/source/c/cyassimp/cyassimp-0.1.2.tar.gz
+  md5: a465739a08285b17ab0126003289e18f
+
+  patches:
+    - windows_setup.patch
+
+requirements:
+  build:
+    - python
+    - distribute
+    - numpy
+    - cython
+    - assimp
+
+  run:
+    - python
+    - numpy
+    - assimp
+
+about:
+  home: https://github.com/menpo/cyassimp/
+  license: BSD License

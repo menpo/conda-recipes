@@ -1,0 +1,12 @@
+package:
+  name: assimp
+  version: 3.0.1270
+
+source:
+  fn: assimp--3.0.1270-full.zip [win]
+  url: http://downloads.sourceforge.net/project/assimp/assimp-3.0/assimp--3.0.1270-full.zip [win]
+  md5: 0038b9d7074265643ca787682baabbf6 [win]
+
+about:
+  home: http://assimp.sourceforge.net/
+  license: BSD
