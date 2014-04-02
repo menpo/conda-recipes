@@ -21,7 +21,10 @@ requirements:
   run:
     - python
     - numpy
-    - assimp
+	
+test:
+  imports:
+    - cyassimp
 
 about:
   home: https://github.com/menpo/cyassimp/
