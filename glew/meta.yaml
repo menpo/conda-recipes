@@ -1,0 +1,15 @@
+package:
+  name: glew
+  version: 1.10.0
+
+source:
+  fn: glew-1.10.0.zip
+  url: https://github.com/menpo/glew/archive/master.zip
+
+requirements:
+  build:
+    - cmake
+
+about:
+  home: http://glew.sourceforge.net/
+  license: BSD

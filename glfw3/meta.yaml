@@ -1,0 +1,16 @@
+package:
+  name: glfw3
+  version: 3.0.4
+
+source:
+  fn: glfw-3.0.4.zip
+  url: http://sourceforge.net/projects/glfw/files/glfw/3.0.4/glfw-3.0.4.zip/download
+  md5: 3949775a24ae921c8de8b948236f3c9a
+
+requirements:
+  build:
+    - cmake
+
+about:
+  home: http://www.glfw.org/
+  license: zlib/libpng
