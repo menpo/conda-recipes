@@ -1,0 +1,12 @@
+package:
+  name: cmake
+  version: 2.8.12.2
+
+source:
+  fn: cmake-2.8.12.2-win32-x86.zip [win]
+  url: http://www.cmake.org/files/v2.8/cmake-2.8.12.2-win32-x86.zip [win]
+  md5: 26f14c791433b81f3fa21325d85cd852 [win]
+  
+about:
+  home: http://www.cmake.org/
+  license: BSD
