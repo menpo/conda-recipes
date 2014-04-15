@@ -1,12 +1,13 @@
 @echo off
-rem Handle different architecture library files
-if %ARCH%==64 (
-    copy /y bin\assimp_release-dll_x64\*.dll %LIBRARY_BIN%\ > nul
-    copy /y lib\assimp_release-dll_x64\*.lib %LIBRARY_LIB%\ > nul
-)
-if %ARCH%==32 (
-    copy /y bin\assimp_release-dll_win32\*.dll %LIBRARY_BIN%\ > nul
-    copy /y lib\assimp_release-dll_win32\*.lib %LIBRARY_LIB%\ > nul
-)
-rem Copy all of the include header files
-xcopy include\assimp %LIBRARY_INC%\assimp /E /I > nul
+
+mkdir build
+cd build
+cmake .. ^
+ -DENABLE_BOOST_WORKAROUND=1 ^
+ -DBUILD_ASSIMP_TOOLS=0 ^
+ -DINCLUDE_INSTALL_DIR=%LIBRARY_INC% ^
+ -DLIB_INSTALL_DIR=%LIBRARY_LIB% ^
+ -DBIN_INSTALL_DIR=%LIBRARY_BIN%
+
+cmake --build . --config "Release|Win"%ARCH% --target ALL_BUILD
+cmake --build . --config "Release|Win"%ARCH% --target INSTALL

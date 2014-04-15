@@ -31,7 +31,7 @@ index 6cd5c20..c985c9c 100644
 +    if CONDA_ASSIMP_DIR is not None:
 +        ext_kwargs['include_dirs'] = [os.path.join(CONDA_ASSIMP_DIR, 'include')]
 +        ext_kwargs['library_dirs'] = [os.path.join(CONDA_ASSIMP_DIR, 'lib')]
-+        dlls = glob(os.path.join(CONDA_ASSIMP_DIR, 'bin', 'Assimp*.dll'))
++        dlls = glob(os.path.join(CONDA_ASSIMP_DIR, 'lib', 'Assimp*.dll'))
 +        for d in dlls:
 +            basename = os.path.basename(d)
 +            shutil.copy(d, localpath('cyassimp', basename))

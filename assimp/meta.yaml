@@ -3,10 +3,14 @@ package:
   version: 3.0.1270
 
 source:
-  fn: assimp--3.0.1270-full.zip [win]
-  url: http://sourceforge.net/projects/assimp/files/assimp-3.0/assimp--3.0.1270-full.zip/download [win]
-  md5: 0038b9d7074265643ca787682baabbf6 [win]
+  fn: assimp--3.0.1270-source-only.zip [win]
+  url: http://sourceforge.net/projects/assimp/files/assimp-3.0/assimp--3.0.1270-source-only.zip/download [win]
+  md5: 52aa4cf4e34e6b2a9c5f6c0b3c319af1 [win]
 
+requirements:
+  build:
+    - cmake
+  
 about:
   home: http://assimp.sourceforge.net/
   license: BSD
