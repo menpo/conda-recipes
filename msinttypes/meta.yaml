@@ -1,0 +1,12 @@
+package:
+  name: msinttypes
+  version: r26
+
+source:
+  fn: msinttypes-r26.zip [win]
+  url: https://msinttypes.googlecode.com/files/msinttypes-r26.zip [win]
+  sha1: d9e175f5e39de9a822efa1388a3286517624acdf [win]
+  
+about:
+  home: https://code.google.com/p/msinttypes
+  license: BSD
