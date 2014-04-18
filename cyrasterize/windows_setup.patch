@@ -34,9 +34,9 @@ index 2f06bed..d82c337 100644
 +            basename = os.path.basename(d)
 +            shutil.copy(d, localpath('cyrasterize', basename))
 +elif sys.platform.startswith('linux'):
-     ext_kwargs['libraries'] += ['m', 'GLEW', 'GL', 'GLU', 'glfw']
+     ext_kwargs['libraries'] = ['m', 'GLEW', 'GL', 'GLU', 'glfw']
  elif sys.platform == 'darwin':
-     ext_kwargs['libraries'] += ['m', 'GLEW', 'glfw3']
+     ext_kwargs['libraries'] = ['m', 'GLEW', 'glfw3']
 @@ -114,7 +140,7 @@ setup(name='cyrasterize',
        ext_modules=extensions,
        packages=find_packages(),
