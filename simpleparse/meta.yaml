@@ -1,0 +1,24 @@
+package:
+  name: simpleparse
+  version: 2.1.1
+
+source:
+  fn: simpleparse-2.1.1.tar.gz
+  url: https://pypi.python.org/packages/source/S/SimpleParse/SimpleParse-2.1.1.tar.gz
+  md5: d67aaceca86acc763d6eebee919cc8aa
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - simpleparse
+
+about:
+  home: http://simpleparse.sourceforge.net/
+  license: BSD

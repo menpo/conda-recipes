@@ -1,0 +1,24 @@
+package:
+  name: pydispatcher
+  version: 2.0.3
+
+source:
+  fn: pydispatcher-2.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/P/PyDispatcher/PyDispatcher-2.0.3.tar.gz
+  md5: d31581da170810315fc2539e967ad8cf
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - pydispatch
+
+about:
+  home: http://pydispatcher.sourceforge.net
+  license: BSD

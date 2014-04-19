@@ -1,0 +1,30 @@
+package:
+  name: menpo-pyvrml97
+  version: 2.3.0a4
+
+source:
+  fn: menpo-pyvrml97-2.3.0a4.tar.gz
+  url: https://pypi.python.org/packages/source/m/menpo-PyVRML97/menpo-PyVRML97-2.3.0a4.tar.gz
+  md5: 07d28598ca55c4b71d4e44692627f3db
+
+requirements:
+  build:
+    - python
+    - numpy
+    - setuptools
+    - simpleparse
+    - pydispatcher
+
+  run:
+    - python
+    - numpy
+    - simpleparse
+    - pydispatcher
+
+test:
+  imports:
+    - vrml.vrml97.parser
+
+about:
+  home: https://github.com/menpo/vrml97/
+  license: BSD
