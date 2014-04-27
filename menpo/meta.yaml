@@ -1,12 +1,11 @@
 package:
   name: menpo
-  version: 0.2
+  version: 0.2.1
 
 source:
-  fn: menpo-0.2.zip
-  url: https://github.com/menpo/menpo/archive/windows_fixes.zip
-  #url: https://pypi.python.org/packages/source/c/cyrasterize/cyrasterize-0.1.4.tar.gz
-  #md5: 67e5cd526c60833c37f67f31e1d63481
+  fn: menpo-0.2.1.tar.gz
+  url: https://pypi.python.org/packages/source/m/menpo/menpo-0.2.1.tar.gz
+  md5: 031c0a8677e74e6ed21f3c335b93988f
 
 requirements:
   build:
