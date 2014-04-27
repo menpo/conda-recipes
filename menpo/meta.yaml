@@ -20,7 +20,7 @@ requirements:
     - scipy
     - cyrasterize
     - cyassimp
-    - pillow
+    - imaging
     - mayavi
     - scikit-image
     - scikit-learn
