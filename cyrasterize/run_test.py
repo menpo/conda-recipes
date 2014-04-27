@@ -1,7 +1,7 @@
 import numpy as np
 from cyrasterize import CyRasterizer
 from numpy.testing import assert_allclose
-
+import os
 
 def test_basic_random():
     c = CyRasterizer(width=100, height=100)
@@ -17,4 +17,5 @@ def test_basic_random():
 
 
 if __name__ == "__main__":
-    test_basic_random()
+    if os.environ.get('IN_VM') is None:
+        test_basic_random()
