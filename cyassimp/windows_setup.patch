@@ -7,9 +7,9 @@ index 6cd5c20..c985c9c 100644
  # Partially adapted from https://github.com/OP2/PyOP2/blob/master/setup.py
  
 -
- pyx_sources = ["./cyassimp/cyassimpwrapper.pyx"]
- cythonized_sources = ["./cyassimp/cyassimpwrapper.cpp"]
- external_sources = ["./cyassimp/cpp/assimpwrapper.cpp"]
+ pyx_sources = [op.join('cyassimp', 'cyassimpwrapper.pyx')]
+ cythonized_sources = [op.join('cyassimp', 'cyassimpwrapper.cpp')]
+ external_sources = [op.join('cyassimp', 'cpp', 'assimpwrapper.cpp')]
 @@ -15,6 +14,28 @@ ext_kwargs = {
      'language': 'c++'
  }
