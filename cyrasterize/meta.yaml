@@ -1,12 +1,11 @@
 package:
   name: cyrasterize
-  version: 0.1.4
+  version: 0.1.5
 
 source:
-  fn: cyrasterize-0.1.4.zip
-  url: https://github.com/menpo/cyrasterize/archive/windows_fixes.zip
-  #url: https://pypi.python.org/packages/source/c/cyrasterize/cyrasterize-0.1.4.tar.gz
-  #md5: 67e5cd526c60833c37f67f31e1d63481
+  fn: cyrasterize-0.1.5.tar.gz
+  url: https://pypi.python.org/packages/source/c/cyrasterize/cyrasterize-0.1.5.tar.gz
+  md5: 33dcc76dbeb639112c7936711122ec2f
 
   patches:
     - windows_setup.patch
