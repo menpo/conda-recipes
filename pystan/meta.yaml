@@ -1,0 +1,32 @@
+package:
+  name: pystan
+  version: 2.2.0.0
+
+source:
+  fn: pystan-2.2.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/pystan/pystan-2.2.0.0.tar.gz
+  md5: 1b8feab9017d2bc576f99b82bce57c4b
+  
+  patches:
+    - windows_setup.patch
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - cython
+    - msinttypes
+
+  run:
+    - python
+    - numpy
+    - cython
+
+test:
+  imports:
+    - pystan
+
+about:
+  home: http://mc-stan.org/pystan.html
+  license: GPLv3
