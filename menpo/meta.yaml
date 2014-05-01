@@ -1,11 +1,11 @@
 package:
   name: menpo
-  version: 0.2.1
+  version: 0.2.3
 
 source:
-  fn: menpo-0.2.1.tar.gz
-  url: https://pypi.python.org/packages/source/m/menpo/menpo-0.2.1.tar.gz
-  md5: 031c0a8677e74e6ed21f3c335b93988f
+  fn: menpo-0.2.3.tar.gz
+  url: https://pypi.python.org/packages/source/m/menpo/menpo-0.2.3.tar.gz
+  md5: 830d5406cbae72dd6ac47ea51454470c
 
 requirements:
   build:
