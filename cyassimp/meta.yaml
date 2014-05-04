@@ -8,7 +8,7 @@ source:
   md5: a0cded25388b7ae903841266420ec3ff
 
   patches:
-    - windows_setup.patch
+    - windows_setup.patch [win]
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
   run:
     - python
     - numpy
+    - assimp [unix]
 	
 test:
   imports:

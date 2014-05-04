@@ -8,7 +8,7 @@ source:
   md5: 33dcc76dbeb639112c7936711122ec2f
 
   patches:
-    - windows_setup.patch
+    - windows_setup.patch [win]
 
 requirements:
   build:
@@ -18,11 +18,13 @@ requirements:
     - cython
     - glew
     - glfw3
-    - msinttypes
+    - msinttypes [win]
 
   run:
     - python
     - numpy
+    - glew [unix]
+    - glfw3 [unix]
     
 test:
   imports:
