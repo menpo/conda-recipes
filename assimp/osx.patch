@@ -1,0 +1,29 @@
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -2,7 +2,7 @@
+ PROJECT( Assimp )
+ 
+ # Define here the needed parameters
+-set (ASSIMP_SV_REVISION 1264)
++set (ASSIMP_SV_REVISION 255)
+ set (ASSIMP_VERSION_MAJOR 3)
+ set (ASSIMP_VERSION_MINOR 0)
+
+--- code/STEPFile.h	2014-05-05 07:10:10.000000000 -0700
++++ code/STEPFile.h	2014-05-05 07:12:19.000000000 -0700
+@@ -195,13 +195,13 @@
+ 			// conversion support.
+ 			template <typename T>
+ 			const T& ResolveSelect(const DB& db) const {
+-				return Couple<T>(db).MustGetObject(To<EXPRESS::ENTITY>())->To<T>();
++				return Couple<T>(db).MustGetObject(To<EXPRESS::ENTITY>())->template To<T>();
+ 			}
+ 
+ 			template <typename T>
+ 			const T* ResolveSelectPtr(const DB& db) const {
+ 				const EXPRESS::ENTITY* e = ToPtr<EXPRESS::ENTITY>();
+-				return e?Couple<T>(db).MustGetObject(*e)->ToPtr<T>():(const T*)0;
++				return e?Couple<T>(db).MustGetObject(*e)->template ToPtr<T>():(const T*)0;
+ 			}
+ 
+ 		public:
