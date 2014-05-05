@@ -9,19 +9,8 @@ if [ $ARCH -eq 64 ]; then
   fi
 fi
 
-# On OSX we need to use boost, so make sure
-# that you 'brew install boost' before running
-# this script
-if [ "$(uname)" == "Darwin" ]; then
-  BOOST_WORKAROUND=0
-  CMAKE_ARCH=""
-else
-  BOOST_WORKAROUND=1
-fi
-
-
 cmake .. -G"$CMAKE_GENERATOR" \
--DENABLE_BOOST_WORKAROUND=$BOOST_WORKAROUND \
+-DENABLE_BOOST_WORKAROUND=1 \
 -DBUILD_ASSIMP_TOOLS=0 \
 -DCMAKE_INSTALL_PREFIX=$PREFIX
 
