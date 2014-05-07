@@ -44,8 +44,9 @@ def upload_package(package, force):
     # Call binstar
     error_code = subprocess.call(command, shell=is_windows)
     if error_code != 0:
-        raise EnvironmentError('Executing binstar upload failed with a '
-                               'return code of {}'.format(error_code))
+        if force or error_code != 1:
+            raise EnvironmentError('Executing binstar upload failed with a '
+                                   'return code of {}'.format(error_code))
     else:
         print('Successfully uploaded {}'.format(package))
 
