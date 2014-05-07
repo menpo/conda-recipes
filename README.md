@@ -17,7 +17,7 @@ and now, after changing into the conda-recipes directory
 
     >> python build.py --help
 
-Follow the instructions to build the packages. This assume that you either have conda installed in the global environment (pass no architecture flags) or have setup your environment to allow switching between architectures. In this case the build script looks for commands of the form `conda32` and `conda64` which should properly activate the conda environment.
+Follow the instructions to build the packages. This assume that you either have conda installed in the global environment or have switched to the required environment beforehand.
 
 Building in a Virtual Machine
 -----------------------------
