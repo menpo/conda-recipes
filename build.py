@@ -2,10 +2,10 @@ import subprocess
 import platform
 import sys
 
-platform = platform.system()
-is_windows = platform == 'windows'
+active_platform = platform.system()
+is_windows = active_platform.lower() == 'windows'
 packages_list = ['assimp', 'cyassimp', 'glew', 'glfw3', 'cyrasterize',
-                 'menpo-pyvrml', 'menpo']
+                 'menpo-pyvrml97', 'menpo']
 
 
 def run():
@@ -16,7 +16,7 @@ def run():
         error_code = subprocess.call(command, shell=is_windows)
         if error_code != 0:
             raise EnvironmentError('Executing conda build failed with a '
-                                   'return code of {}'.format(p.returncode))
+                                   'return code of {}'.format(error_code))
         else:
             print('Successfuly built {}'.format(package))
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     # No arguments passed
     if len(sys.argv) == 1:
         try:
-            error_code = subprocess.call(['conda', '-v'], shell=is_windows)
+            error_code = subprocess.call(['conda', '-V'], shell=is_windows)
             if error_code != 0:
                 raise EnvironmentError('"conda" does not appear to be installed')
         except Exception as e:
