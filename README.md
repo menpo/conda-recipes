@@ -8,13 +8,16 @@ Building Menpo
 
 Be sure to update the version numbers of any updated packages, the URLS and MD5s in the yaml files.
 
-You will need conda-build installed
+You will need the following packages installed
 
-    >> conda install conda-build
+    >> conda install conda-build binstar pip
+    >> pip install docopt
     
 and now, after changing into the conda-recipes directory
 
-    >> conda build cyrasterize cyassimp menpo-pyvrml97 menpo
+    >> python build.py --help
+
+Follow the instructions to build the packages. This assume that you either have conda installed in the global environment or have switched to the required environment beforehand.
 
 Building in a Virtual Machine
 -----------------------------
