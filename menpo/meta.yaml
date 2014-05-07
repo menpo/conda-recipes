@@ -30,6 +30,10 @@ requirements:
     - menpo-pyvrml97
 
 test:
+  requires:
+    - nose
+  commands:
+    - nosetests -v -a '!fuzzy' menpo
   imports:
     - menpo.fit
     - menpo.fitmultilevel
