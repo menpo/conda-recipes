@@ -1,11 +1,11 @@
 package:
   name: menpo
-  version: 0.2.3
+  version: 0.2.5
 
 source:
-  fn: menpo-0.2.3.tar.gz
-  url: https://pypi.python.org/packages/source/m/menpo/menpo-0.2.3.tar.gz
-  md5: 830d5406cbae72dd6ac47ea51454470c
+  fn: menpo-0.2.5.tar.gz
+  url: https://pypi.python.org/packages/source/m/menpo/menpo-0.2.5.tar.gz
+  md5: 0aae032b5429ccce1f3c37077407534e
 
 requirements:
   build:
@@ -31,13 +31,9 @@ requirements:
 
 test:
   imports:
-    - menpo.decomposition
-    - menpo.features
     - menpo.fit
     - menpo.fitmultilevel
-    - menpo.groupalign
     - menpo.image
-    - menpo.interpolation
     - menpo.io
     - menpo.landmark
     - menpo.model
