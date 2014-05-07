@@ -8,9 +8,9 @@ Building Menpo
 
 Be sure to update the version numbers of any updated packages, the URLS and MD5s in the yaml files.
 
-You will need conda-build installed
+You will need the following packages installed
 
-    >> conda install conda-build
+    >> conda install conda-build binstar docopt
     
 and now, after changing into the conda-recipes directory
 
