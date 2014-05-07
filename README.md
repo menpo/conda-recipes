@@ -11,7 +11,7 @@ Be sure to update the version numbers of any updated packages, the URLS and MD5s
 You will need the following packages installed
 
     >> conda install conda-build binstar pip
-    >>> pip install docopt
+    >> pip install docopt
     
 and now, after changing into the conda-recipes directory
 
