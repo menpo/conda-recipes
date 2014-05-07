@@ -1,0 +1,3 @@
+We maintain the same patch that brew does. This just keeps us consistent
+when you use either this glfw or brew's glfw. The patch merely creates
+the library and appends the version number: glfw3.dynlib
