@@ -1,20 +1,18 @@
 #!/bin/bash
 mkdir build
 cd build
-ARCH=64
-PY_VER=2
-if [ $ARCH -eq 64 ]; then
-  echo 64 bit
-  if [ $PY_VER -lt 3 ]; then 
-    CMAKE_GENERATOR="Unix Makefiles"
-    CMAKE_ARCH="-m64"
-    echo Using Python 2
-  fi
+
+CMAKE_GENERATOR="Unix Makefiles"
+CMAKE_ARCH="-m"$ARCH
+
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  export CFLAGS="$CFLAGS $CMAKE_ARCH"
+  export LDLAGS="$LDLAGS $CMAKE_ARCH"
 fi
 
 cmake .. -G"$CMAKE_GENERATOR" \
 -DBUILD_SHARED_LIBS=1 \
--DCMAKE_INSTALL_PREFIX=$PREFIX \
+-DCMAKE_INSTALL_PREFIX=$PREFIX
 
 make
 make install
