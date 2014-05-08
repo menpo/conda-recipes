@@ -17,7 +17,9 @@ and now, after changing into the conda-recipes directory
 
     >> python build.py --help
 
-Follow the instructions to build the packages. This assume that you either have conda installed in the global environment or have switched to the required environment beforehand.
+Follow the instructions to build the packages. This assume that you either have conda installed in the global environment or have switched to the required environment beforehand. For example to build all the packages for a new release, and upload them:
+
+    >> python build.py all --upload
 
 Building in a Virtual Machine
 -----------------------------
