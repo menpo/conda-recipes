@@ -1,0 +1,32 @@
+package:
+  name: opencv
+  version: 2.9
+
+source:
+  fn: opencv-2.4.9.tar.gz
+  url: https://github.com/Itseez/opencv/archive/2.4.9.tar.gz
+  md5: cc0a8307403ff471f554197401ec0eb9
+
+requirements:
+  build:
+   - cmake  [win]
+   - numpy
+   - jpeg
+   - zlib
+   - libpng
+
+  run:
+   - python
+   - numpy
+   - jpeg
+   - zlib
+   - libpng
+
+test:
+  imports:
+    - cv2
+    - cv2.cv
+
+about:
+  home: http://opencv.org/
+  license: BSD
