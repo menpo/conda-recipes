@@ -1,0 +1,12 @@
+package:
+  name: tbb
+  version: 4.2.3
+
+source:
+  fn: tbb42_20140122oss_src.tgz
+  url: https://www.threadingbuildingblocks.org/sites/default/files/software_releases/source/tbb42_20140122oss_src.tgz
+  sha1: d897a6ced4f425c6608422a2e19218898e727260
+  
+about:
+  home: https://www.threadingbuildingblocks.org/
+  license: GPLv2

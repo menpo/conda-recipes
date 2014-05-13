@@ -41,6 +41,7 @@ cmake .. -G"$CMAKE_GENERATOR"                                            \
     -DWITH_OPENCL=0                                                      \
     -DWITH_OPENNI=0                                                      \
     -DWITH_FFMPEG=0                                                      \
+    -DWITH_TBB=1                                                         \
     -DCMAKE_INSTALL_PREFIX=$PREFIX
 make
 make install
