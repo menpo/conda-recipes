@@ -1,0 +1,30 @@
+package:
+  name: landmarkerio-server
+  version: 0.0.5
+
+source:
+  fn: landmarkerio-server-0.0.5.tar.gz
+  url: https://pypi.python.org/packages/source/l/landmarkerio-server/landmarkerio-server-0.0.5.tar.gz
+  md5: b894f954ffb14c202d03cc3243883bc5
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - flask
+    - flask-restful
+    - menpo
+
+  run:
+    - python
+    - flask
+    - flask-restful
+    - menpo
+
+test:
+  imports:
+    - landmarkerioserver
+
+about:
+  home: https://github.com/menpo/landmarkerio-server
+  license: BSD
