@@ -24,7 +24,8 @@ from docopt import docopt
 active_platform = platform.system()
 is_windows = active_platform.lower() == 'windows'
 all_packages_list = ['assimp', 'cyassimp', 'glew', 'glfw3', 'cyrasterize',
-                     'menpo-pyvrml97', 'menpo']
+                     'menpo-pyvrml97', 'menpo', 'aniso8601', 'flask-restful',
+                     'landmarkerio-server']
 
 
 def upload_package(package, force):
