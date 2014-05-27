@@ -1,0 +1,32 @@
+package:
+  name: flask-restful
+  version: 0.2.12
+
+source:
+  fn: Flask-RESTful-0.2.12.tar.gz
+  url: https://pypi.python.org/packages/source/F/Flask-RESTful/Flask-RESTful-0.2.12.tar.gz
+  md5: 53049771f4ccb3f40194696bb683db77
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - flask
+    - pytz
+    - six
+    - aniso8601
+
+  run:
+    - python
+    - flask
+    - pytz
+    - six
+    - aniso8601
+
+test:
+  imports:
+    - flask.ext.restful
+
+about:
+  home: https://github.com/twilio/flask-restful
+  license: BSD
