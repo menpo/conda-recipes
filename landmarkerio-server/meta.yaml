@@ -1,11 +1,11 @@
 package:
   name: landmarkerio-server
-  version: 0.0.5
+  version: 0.0.6
 
 source:
-  fn: landmarkerio-server-0.0.5.tar.gz
-  url: https://pypi.python.org/packages/source/l/landmarkerio-server/landmarkerio-server-0.0.5.tar.gz
-  md5: b894f954ffb14c202d03cc3243883bc5
+  fn: landmarkerio-server-0.0.6.tar.gz
+  url: https://pypi.python.org/packages/source/l/landmarkerio-server/landmarkerio-server-0.0.6.tar.gz
+  md5: d9f6b72a1d8b6a211001513bfdddccdb
 
 requirements:
   build:
