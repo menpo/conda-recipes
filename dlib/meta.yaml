@@ -1,0 +1,26 @@
+package:
+  name: dlib
+  version: 18.8
+
+source:
+  fn: dlib-18.8.tar.bz2
+  url: http://sourceforge.net/projects/dclib/files/dlib/v18.8/dlib-18.8.tar.bz2/download
+  md5: 35892d890752a40b2c00547625619d56
+
+requirements:
+  build:
+   - python
+   - cmake  [win]
+   - boost_python
+
+  run:
+   - python
+   - boost_python
+
+test:
+  imports:
+    - dlib
+
+about:
+  home: http://dlib.net/
+  license: Boost Software License
