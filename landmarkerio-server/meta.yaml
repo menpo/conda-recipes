@@ -1,11 +1,11 @@
 package:
   name: landmarkerio-server
-  version: 0.0.5
+  version: 0.0.7
 
 source:
-  fn: landmarkerio-server-0.0.5.tar.gz
-  url: https://pypi.python.org/packages/source/l/landmarkerio-server/landmarkerio-server-0.0.5.tar.gz
-  md5: b894f954ffb14c202d03cc3243883bc5
+  fn: landmarkerio-server-0.0.7.tar.gz
+  url: https://pypi.python.org/packages/source/l/landmarkerio-server/landmarkerio-server-0.0.7.tar.gz
+  md5: 7a01e404731347461b4ad230f3322989
 
 requirements:
   build:
@@ -13,12 +13,14 @@ requirements:
     - setuptools
     - flask
     - flask-restful
+    - flask-compress
     - menpo
 
   run:
     - python
     - flask
     - flask-restful
+    - flask-compress
     - menpo
 
 test:

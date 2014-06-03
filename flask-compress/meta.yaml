@@ -1,0 +1,27 @@
+package:
+  name: flask-compress
+  version: 1.0.2
+
+source:
+  fn: Flask-Compress-1.0.2.tar.gz
+  url: https://pypi.python.org/packages/source/F/Flask-Compress/Flask-Compress-1.0.2.tar.gz
+  md5: 47a5321b06ac2e722e29b7260f28b0fc
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - flask
+
+  run:
+    - python
+    - flask
+
+test:
+  imports:
+    - flask.ext.compress
+
+about:
+  home: https://github.com/wichitacode/flask-compress
+  license: MIT
+
