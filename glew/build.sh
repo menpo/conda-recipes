@@ -17,6 +17,3 @@ cmake .. -G"$CMAKE_GENERATOR" \
 make
 make install
 
-rm -rf $PREFIX/lib/cmake
-rm -rf $PREFIX/lib/pkgconfig
-
