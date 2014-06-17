@@ -18,6 +18,7 @@ export CFLAGS="-I$PREFIX/include -fPIC $CFLAGS"
 export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 
 cmake .. -G"$CMAKE_GENERATOR"                                            \
+    -DBUILD_opencv_apps=0                                                \
     -DBUILD_TESTS=0                                                      \
     -DBUILD_DOCS=0                                                       \
     -DBUILD_PERF_TESTS=0                                                 \
