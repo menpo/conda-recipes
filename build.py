@@ -23,7 +23,7 @@ from docopt import docopt
 
 active_platform = platform.system()
 is_windows = active_platform.lower() == 'windows'
-all_packages_list = ['assimp', 'cyassimp', 'glew', 'glfw3', 'cyrasterize',
+all_packages_list = ['pathlib', 'assimp', 'cyassimp', 'glew', 'glfw3', 'cyrasterize',
                      'menpo-pyvrml97', 'menpo', 'aniso8601', 'flask-restful',
                      'flask-compress', 'landmarkerio-server']
 
