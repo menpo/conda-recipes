@@ -1,14 +1,14 @@
 package:
   name: pystan
-  version: 2.2.0.0
+  version: 2.3.0.0
 
 source:
-  fn: pystan-2.2.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/pystan/pystan-2.2.0.0.tar.gz
-  md5: 1b8feab9017d2bc576f99b82bce57c4b
+  fn: pystan-2.3.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/pystan/pystan-2.3.0.0.tar.gz
+  md5: 0cda5e22bfe878c8ebe4cdc1aaf671c7
   
   patches:
-    - windows_setup.patch
+    - windows_setup.patch [win]
 
 requirements:
   build:
@@ -16,7 +16,7 @@ requirements:
     - setuptools
     - numpy
     - cython
-    - msinttypes
+    - msinttypes [win]
 
   run:
     - python
