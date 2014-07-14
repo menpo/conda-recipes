@@ -30,6 +30,8 @@ requirements:
     - menpo-pyvrml97
     - cython
     - nose
+    - pathlib
+    - pip
 
 test:
   imports:
