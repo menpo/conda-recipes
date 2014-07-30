@@ -1,6 +1,6 @@
 package:
   name: opencv
-  version: 2.9
+  version: 2.4.9
 
 source:
   fn: opencv-2.4.9.tar.gz
