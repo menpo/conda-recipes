@@ -5,7 +5,7 @@
  
  ## extensions
 -extensions_extra_compile_args = ['-O0', '-ftemplate-depth-256']
-+extensions_extra_compile_args = ['/EHsc', '/Ox', '-ftemplate-depth-256', '-DBOOST_DATE_TIME_NO_LIB']
++extensions_extra_compile_args = ['/EHsc', '/Ox', '-DBOOST_DATE_TIME_NO_LIB']
  
  stanc_sources = [
      "pystan/stan/src/stan/gm/grammars/var_decls_grammar_inst.cpp",
@@ -17,54 +17,19 @@
              outfile.write(s)
  
 -        extra_compile_args = ['-O3', '-ftemplate-depth-256']
-+        extra_compile_args = ['/EHsc', '/Ox', '-ftemplate-depth-256', '-DBOOST_DATE_TIME_NO_LIB']
++        extra_compile_args = ['/EHsc', '/Ox', '-DBOOST_DATE_TIME_NO_LIB']
          distutils.log.set_verbosity(verbose)
          extension = Extension(name=module_name,
                                language="c++",
 
---- pystan\stan\src\stan\gm\generator.hpp
-+++ pystan\stan\src\stan\gm\generator.hpp
-@@ -2296,7 +2296,7 @@
-       o << INDENT << model_name << "(stan::io::var_context& context__," << EOL;
-       o << INDENT << "    std::ostream* pstream__ = 0)"
-         << EOL;
--      o << INDENT2 << ": prob_grad::prob_grad(0) {" 
-+      o << INDENT2 << ": prob_grad(0) {" 
-         << EOL; // resize 0 with var_resizing
-       o << INDENT2 << "static const char* function__ = \"" 
-         << model_name << "_namespace::" << model_name << "(%1%)\";" << EOL;
-
---- pystan\stan\src\stan\agrad\rev\matrix\sd.hpp
-+++ pystan\stan\src\stan\agrad\rev\matrix\sd.hpp
-@@ -38,7 +38,7 @@
-         double sd = sqrt(variance);
-         double* partials = (double*) memalloc_.alloc(size * sizeof(double));
-         if (sum_of_squares < 1e-20) {
--          double grad_limit = 1 / std::sqrt(size);
-+          double grad_limit = 1 / std::sqrt((double)size);
-           for (size_t i = 0; i < size; ++i)
-             partials[i] = grad_limit;
-         } else {
-
---- pystan\stan\src\stan\gm\command.hpp
-+++ pystan\stan\src\stan\gm\command.hpp
-@@ -139,7 +139,7 @@
- 
-     void print_progress(int m, int start, int finish, int refresh, bool warmup) {
-       
--      int it_print_width = std::ceil(std::log10(finish));
-+      int it_print_width = std::ceil(std::log10((double)finish));
- 
-       if (do_print(m, (start + m + 1 == finish), refresh )) {
-         
---- pystan\stan_fit.hpp
-+++ pystan\stan_fit.hpp
-@@ -529,7 +529,7 @@
-     }
- 
-     void print_progress(int m, int finish, int refresh, bool warmup) {
--      int it_print_width = std::ceil(std::log10(finish));
-+      int it_print_width = std::ceil(std::log10((double)finish));
-       if (do_print(m, refresh, finish - 1)) {
-         std::cout << "\rIteration: ";
-         std::cout << std::setw(it_print_width) << (m + 1)
+--- pystan\stan\src\stan\gm\grammars\functions_grammar_def.hpp
++++ pystan\stan\src\stan\gm\grammars\functions_grammar_def.hpp
+@@ -126,7 +126,7 @@
+       static bool fun_exists(const std::set<std::pair<std::string,
+                                                       function_signature_t> >& existing,
+                              const std::pair<std::string,function_signature_t>& name_sig) {
+-        for (std::set<std::pair<std::string, function_signature_t> >::iterator it 
++        for (std::set<std::pair<std::string, function_signature_t> >::const_iterator it
+                = existing.begin();
+              it != existing.end();
+              ++it)
