@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ./bootstrap.sh
-./bjam link=shared --with-python stage
+./bjam -j6 -sBZIP2_LIBPATH="$PREFIX/lib" -sBZIP2_INCLUDE="$PREFIX/include" link=shared stage
 
 mkdir -p $PREFIX/lib
 cp -a stage/lib $PREFIX
