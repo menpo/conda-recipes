@@ -9,18 +9,22 @@ source:
   
   patches:
    - gui_patch.patch
+
+build:
+  number: 1
+
 requirements:
   build:
    - python
    - cmake  # [win]
-   - boost_python
+   - boost
    - jpeg
    - libpng
    - sqlite
 
   run:
    - python
-   - boost_python
+   - boost
    - jpeg
    - libpng
    - sqlite
