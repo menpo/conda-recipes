@@ -1,11 +1,11 @@
 package:
   name: pystan
-  version: 2.3.0.0
+  version: 2.4.0.3
 
 source:
-  fn: pystan-2.3.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/pystan/pystan-2.3.0.0.tar.gz
-  md5: 0cda5e22bfe878c8ebe4cdc1aaf671c7
+  fn: pystan-2.4.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/p/pystan/pystan-2.4.0.3.tar.gz
+  md5: 535a65e44b59430153134d1d802683e5
   
   patches:
     - windows_setup.patch [win]
