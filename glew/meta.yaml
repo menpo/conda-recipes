@@ -1,10 +1,10 @@
 package:
   name: glew
-  version: 1.10.0
+  version: "1.10.0"
 
 source:
   fn: glew-1.10.0.zip
-  url: https://github.com/menpo/glew/archive/master.zip
+  url: https://github.com/menpo/glew/archive/v1.10.0.zip
 
 requirements:
   build:

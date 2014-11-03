@@ -1,6 +1,6 @@
 package:
   name: cyrasterize
-  version: 0.1.5
+  version: "0.1.5"
 
 source:
   fn: cyrasterize-0.1.5.tar.gz
@@ -9,22 +9,25 @@ source:
 
   patches:
     - windows_setup.patch [win]
+	
+build:
+  number: 1
 
 requirements:
   build:
     - python
     - distribute
-    - numpy
-    - cython
-    - glew
-    - glfw3
-    - msinttypes [win]
+    - numpy 1.8.0
+    - cython 0.20.1
+    - glew 1.10.0
+    - glfw3 3.0.4
+    - msinttypes r26  # [win]
 
   run:
     - python
-    - numpy
-    - glew [unix]
-    - glfw3 [unix]
+    - numpy 1.8.0
+    - glew 1.10.0  # [unix]
+    - glfw3 3.0.4  # [unix]
     
 test:
   imports:
