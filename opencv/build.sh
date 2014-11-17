@@ -18,6 +18,10 @@ export CFLAGS="-I$PREFIX/include -fPIC $CFLAGS"
 export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 
 cmake .. -G"$CMAKE_GENERATOR"                                            \
+    -DWITH_TBB=1                                                         \
+    -DTBB_LIB_DIR=$LIBRARY_PATH                                          \
+    -DTBB_INCLUDE_DIRS=$INCLUDE_PATH                                     \
+    -DTBB_STDDEF_PATH=$INCLUDE_PATH/tbb/tbb_stddef.h                     \
     -DBUILD_opencv_apps=0                                                \
     -DBUILD_TESTS=0                                                      \
     -DBUILD_DOCS=0                                                       \

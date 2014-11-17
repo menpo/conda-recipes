@@ -1,11 +1,11 @@
 package:
   name: opencv
-  version: 2.4.9
+  version: 2.4.9.1
 
 source:
-  fn: opencv-2.4.9.tar.gz
-  url: https://github.com/Itseez/opencv/archive/2.4.9.tar.gz
-  md5: cc0a8307403ff471f554197401ec0eb9
+  fn: opencv-2.4.9.1.tar.gz
+  url: https://github.com/Itseez/opencv/archive/2.4.9.1.tar.gz
+  sha256: a0475ebe5cc17ea3a72ff2d7498c5c7ce0a54d149e31ed8812d119700d040091
 
 requirements:
   build:
@@ -14,6 +14,7 @@ requirements:
    - jpeg
    - zlib
    - libpng
+   - tbb  # [osx]
 
   run:
    - python
@@ -21,6 +22,7 @@ requirements:
    - jpeg
    - zlib
    - libpng
+   - tbb  # [osx]
 
 test:
   imports:

@@ -1,0 +1,13 @@
+package:
+  name: tbb
+  version: "4.3_20141023"
+
+source:
+  fn: tbb43_20141023oss_osx.tgz  # [osx]
+  url: https://www.threadingbuildingblocks.org/sites/default/files/software_releases/mac/tbb43_20141023oss_osx.tgz  # [osx]
+  sha256: 692a0c942a626eb7237485591d73aab298f3624b4348023d66913b73496e3a71  # [osx]
+
+about:
+  home: https://www.threadingbuildingblocks.org/
+  license: GPLv2
+
