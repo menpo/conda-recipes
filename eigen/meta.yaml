@@ -1,0 +1,16 @@
+package:
+  name: eigen
+  version: "3.2.2"
+
+source:
+  fn: eigen-3.2.2.tar.bz2
+  url: http://bitbucket.org/eigen/eigen/get/3.2.2.tar.bz2
+  sha1: 1e1a85681777314805003db5469d1a00785c58df
+
+requirements:
+  build:
+    - cmake [win]
+
+about:
+  home: http://eigen.tuxfamily.org/
+  license: MPL2

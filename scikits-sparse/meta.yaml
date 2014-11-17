@@ -1,0 +1,32 @@
+package:
+  name: scikits-sparse
+  version: "0.2"
+
+source:
+  fn: scikits.sparse-0.2.tar.gz
+  url: https://pypi.python.org/packages/source/s/scikits.sparse/scikits.sparse-0.2.tar.gz
+  md5: 0ee93ef2b1e5b9eb5c2a4e29dd06168a
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - scipy
+    - cython
+    - numpy  >=1.9
+    - suitesparse 4.4.1
+
+  run:
+    - python
+    - scipy
+    - numpy  >=1.9
+    - suitesparse 4.4.1
+
+test:
+  imports:
+    - scikits.sparse.cholmod
+
+about:
+  home: https://pythonhosted.org/scikits.sparse
+  license: BSD
+
