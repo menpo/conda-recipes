@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
-mkdir -p "$INCLUDE_PATH/tbb" && cp -R "include/tbb/" "$INCLUDE_PATH/tbb"
-mkdir -p "$INCLUDE_PATH/serial" && cp -R "include/serial/" "$INCLUDE_PATH/serial"
+rsync -aPq "include/tbb" "$INCLUDE_PATH"
+rsync -aPq "include/serial" "$INCLUDE_PATH"
 
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  DYNAMIC_EXT="so"
+  # On Linux, there's more variability, so lets build from scratch
+  make -j$CPU_COUNT prefix=$PREFIX
+  mkdir -p $LIBRARY_PATH && cp build/linux*_release/*.so* $LIBRARY_PATH
 fi
 if [ "$(uname -s)" == "Darwin" ]; then
+  # On OSX, just copy the pre-built binaries
   DYNAMIC_EXT="dylib"
+  rsync -aPq lib/*.dylib ${LIBRARY_PATH}
 fi
 
-rsync -aPq lib/*.${DYNAMIC_EXT} ${LIBRARY_PATH}

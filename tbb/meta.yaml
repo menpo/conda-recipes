@@ -6,6 +6,9 @@ source:
   fn: tbb43_20141023oss_osx.tgz  # [osx]
   url: https://www.threadingbuildingblocks.org/sites/default/files/software_releases/mac/tbb43_20141023oss_osx.tgz  # [osx]
   sha256: 692a0c942a626eb7237485591d73aab298f3624b4348023d66913b73496e3a71  # [osx]
+  fn: tbb43_20141023oss_src.tgz  # [linux]
+  url: https://www.threadingbuildingblocks.org/sites/default/files/software_releases/source/tbb43_20141023oss_src.tgz  # [linux]
+  sha256: 247a8d22d6850caa37d376aaeaf8bfcb06525ec5561fb6f6ed09cdad2c1f6414  # [linux]
 
 about:
   home: https://www.threadingbuildingblocks.org/
