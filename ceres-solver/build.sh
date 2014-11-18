@@ -4,10 +4,15 @@ cd build
 
 if [ "$(uname -s)" == "Darwin" ]; then
   export MACOSX_DEPLOYMENT_TARGET=10.6
+  EXTRA_CXX_FLAGS=""
 fi
-# The wno-error is for Linux, GCC complains about unused typedefs Scalar from Eigen
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  # The wno-error is for Linux, GCC complains about unused typedefs Scalar from Eigen
+  EXTRA_CXX_FLAGS="-Wno-error=unused-local-typedefs"
+fi
+
 cmake .. \
--DCMAKE_CXX_FLAGS="-Wno-error=unused-local-typedefs" \
+-DCMAKE_CXX_FLAGS=$EXTRA_CXX_FLAGS \
 -DMINIGLOG=1 \
 -DEIGEN_INCLUDE_DIR=$INCLUDE_PATH \
 -DMETIS_LIBRARY=$LIBRARY_PATH/libmetis.a \
