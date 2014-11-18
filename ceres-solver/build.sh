@@ -2,9 +2,12 @@
 mkdir build
 cd build
 
-export MACOSX_DEPLOYMENT_TARGET=10.6
-
+if [ "$(uname -s)" == "Darwin" ]; then
+  export MACOSX_DEPLOYMENT_TARGET=10.6
+fi
+# The wno-error is for Linux, GCC complains about unused typedefs Scalar from Eigen
 cmake .. \
+-DCMAKE_CXX_FLAGS="-Wno-error=unused-local-typedefs" \
 -DMINIGLOG=1 \
 -DEIGEN_INCLUDE_DIR=$INCLUDE_PATH \
 -DMETIS_LIBRARY=$LIBRARY_PATH/libmetis.a \
