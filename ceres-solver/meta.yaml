@@ -1,11 +1,11 @@
 package:
   name: ceres-solver
-  version: "1.9.0"
+  version: "1.10.0rc1"
 
 source:
-  fn: ceres-solver-1.9.0.tar.gz
-  url: http://ceres-solver.org/ceres-solver-1.9.0.tar.gz
-  sha1: f73ab69cfa1e19d40961503984bc7d6b601cb8a6
+  fn: ceres-solver-1.10.0rc1.tar.gz
+  url: https://ceres-solver.googlesource.com/ceres-solver/+archive/6768b3586a027bb850c0a50e2a27380f5d80142a.tar.gz
+
 
 requirements:
   build:
