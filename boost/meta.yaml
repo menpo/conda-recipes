@@ -1,11 +1,11 @@
 package:
   name: boost
-  version: 1.55.0
+  version: 1.56.0
 
 source:
-  fn: boost_1_55_0.tar.bz2
-  url: http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.bz2/download
-  md5: d6eef4b4cacb2183f2bf265a5a03a354
+  fn: boost_1_56_0.tar.bz2
+  url: http://sourceforge.net/projects/boost/files/boost/1.56.0/boost_1_56_0.tar.bz2/download
+  sha1: f94bb008900ed5ba1994a1072140590784b9b5df
 
 requirements:
   build:
