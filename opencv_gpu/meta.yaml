@@ -1,0 +1,34 @@
+package:
+  name: opencv-gpu
+  version: 2.4.9.1
+
+source:
+  fn: opencv-2.4.9.1.tar.gz
+  url: https://github.com/Itseez/opencv/archive/2.4.9.1.tar.gz
+  sha256: a0475ebe5cc17ea3a72ff2d7498c5c7ce0a54d149e31ed8812d119700d040091
+
+requirements:
+  build:
+   - cmake  [win]
+   - numpy
+   - jpeg
+   - zlib
+   - libpng
+   - tbb  # [osx]
+
+  run:
+   - python
+   - numpy
+   - jpeg
+   - zlib
+   - libpng
+   - tbb  # [osx]
+
+test:
+  imports:
+    - cv2
+    - cv2.cv
+
+about:
+  home: http://opencv.org/
+  license: BSD
