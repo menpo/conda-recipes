@@ -62,3 +62,8 @@ rmdir "%LIBRARY_PREFIX%\%OPENCV_ARCH%" /S /Q
 rem By default cv.py is installed directly in site-packages
 rem Therefore, we have to copy all of the dlls directly into it!
 xcopy "%LIBRARY_LIB%\opencv*.dll" "%SP_DIR%"
+
+rem We have to copy libpng.dll and zlib.dll for runtime
+rem dependencies, similar to copying opencv above.
+xcopy "%LIBRARY_BIN%\libpng15.dll" "%SP_DIR%"
+xcopy "%LIBRARY_BIN%\zlib.dll" "%SP_DIR%"
