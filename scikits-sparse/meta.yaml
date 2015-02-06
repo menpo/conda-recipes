@@ -1,9 +1,9 @@
 package:
-  name: scikits-sparse
+  name: scikits.sparse
   version: "0.2"
 
 source:
-  fn: scikits.sparse-0.2.tar.gz
+  fn: scikits.sparse-0.2.zip
   url: https://github.com/njsmith/scikits-sparse/archive/2fd1533b847b1cea82b2143ac334d770a26fa2a3.zip
 
 requirements:
@@ -12,15 +12,15 @@ requirements:
     - setuptools
     - scipy
     - cython
-    - numpy  >=1.9
-    - suitesparse
+    - numpy >=1.9
+    - suitesparse 4.4.1
 
   run:
     - python
     - setuptools
     - scipy
-    - numpy  >=1.9
-    - suitesparse
+    - numpy >=1.9
+    - suitesparse 4.4.1
 
 test:
   imports:
