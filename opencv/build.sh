@@ -29,7 +29,7 @@ cmake .. -G"$CMAKE_GENERATOR"                                            \
     -DBUILD_TIFF=1                                                       \
     -DBUILD_PNG=0                                                        \
     -DBUILD_OPENEXR=0                                                    \
-    -DBUILD_JASPER=0                                                     \
+    -DBUILD_JASPER=1                                                     \
     -DBUILD_JPEG=0                                                       \
     -DJPEG_INCLUDE_DIR=$PREFIX/include                                   \
     -DJPEG_LIBRARY=$PREFIX/lib/libjpeg.$DYNAMIC_EXT                      \
