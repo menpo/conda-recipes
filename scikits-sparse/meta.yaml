@@ -4,8 +4,7 @@ package:
 
 source:
   fn: scikits.sparse-0.2.tar.gz
-  url: https://pypi.python.org/packages/source/s/scikits.sparse/scikits.sparse-0.2.tar.gz
-  md5: 0ee93ef2b1e5b9eb5c2a4e29dd06168a
+  url: https://github.com/njsmith/scikits-sparse/archive/2fd1533b847b1cea82b2143ac334d770a26fa2a3.zip
 
 requirements:
   build:
@@ -14,17 +13,25 @@ requirements:
     - scipy
     - cython
     - numpy  >=1.9
-    - suitesparse 4.4.1
+    - suitesparse
 
   run:
     - python
+    - setuptools
     - scipy
     - numpy  >=1.9
-    - suitesparse 4.4.1
+    - suitesparse
 
 test:
   imports:
+    - scikits.sparse
     - scikits.sparse.cholmod
+
+  requires:
+    - nose
+
+  commands:
+    - nosetests scikits.sparse.test_cholmod
 
 about:
   home: https://pythonhosted.org/scikits.sparse
