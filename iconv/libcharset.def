@@ -1,0 +1,3 @@
+EXPORTS
+libcharset_relocate = __lock
+libcharset_set_relocation_prefix
