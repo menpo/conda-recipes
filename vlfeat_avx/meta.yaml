@@ -2,17 +2,21 @@ package:
   name: vlfeat
   version: "0.9.20"
 
+build:
+  features:
+    - avx
+
+  string: "avx"
+
 source:
   fn: vlfeat-0.9.20-bin.tar.gz
   url: http://www.vlfeat.org/download/vlfeat-0.9.20-bin.tar.gz
 
-  patches:
-    - no_test.patch
-
 test:
-  commands: 
+  commands:
     - sift -h
 
 about:
   home: http://www.vlfeat.org/
   license: BSD
+
