@@ -1,0 +1,13 @@
+EXPORTS
+_libiconv_version
+aliases2_lookup
+aliases_lookup
+iconv_canonicalize
+libiconv
+libiconv_close
+libiconv_open
+libiconv_open_into = __decode_pointer
+libiconv_relocate = _strdup
+libiconv_set_relocation_prefix
+libiconvctl
+libiconvlist
