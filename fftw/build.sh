@@ -10,8 +10,8 @@
 # conda libm.so does not provide (__log_finite). So the approach is to override
 # the include directories so fftw uses the math.h provided by the "system"
 # conda package instead of the current Arch math.h.
-# CPPFLAGS+=" -I $SYS_PREFIX/include"
-# export CPPFLAGS=$CPPFLAGS
+CPPFLAGS+=" -I$INCLUDE_PATH"
+export CPPFLAGS=$CPPFLAGS
 
 # Another problem with building on Arch. It uses a memcpy provided by the
 # versioned symbol GLIBC_2.14, which is from string.h. There is no conda
@@ -30,17 +30,17 @@ CONFIGURE="./configure --prefix=$PREFIX --enable-shared --enable-threads --disab
 
 # Single precision (fftw libraries have "f" suffix)
 $CONFIGURE --enable-float --enable-sse --enable-avx
-make
+make -j$CPU_COUNT
 make install
 
 # Long double precision (fftw libraries have "l" suffix)
 $CONFIGURE --enable-long-double
-make
+make -j$CPU_COUNT
 make install
 
 # Double precision (fftw libraries have no precision suffix)
 $CONFIGURE --enable-sse2 --enable-avx
-make
+make -j$CPU_COUNT
 make install
 
 # Test suite
@@ -50,7 +50,7 @@ make install
 # while we have access to the fftw test suite.
 
 # two random checks
-cd tests && make check-local
+cd tests && make check-local -j$CPU_COUNT
 
 ## 30 random checks
 #cd tests && make smallcheck
