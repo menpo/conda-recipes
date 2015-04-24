@@ -1,27 +1,22 @@
 package:
   name: opencv
-  version: 2.4.9.1
+  version: 2.4.11
 
 source:
-  fn: opencv-2.4.9.1.tar.gz
-  url: https://github.com/Itseez/opencv/archive/2.4.9.1.tar.gz
-  sha256: a0475ebe5cc17ea3a72ff2d7498c5c7ce0a54d149e31ed8812d119700d040091
+  fn: opencv-2.4.11.zip
+  url: http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.11/opencv-2.4.11.zip/download
+  sha1: d6e3048416d42213c204f89b9dfe39742f9a708c
 
 requirements:
   build:
    - cmake  [win]
    - numpy
-   - jpeg
-   - zlib
-   - libpng
+   - eigen
    - tbb  # [osx]
 
   run:
    - python
    - numpy
-   - jpeg
-   - zlib
-   - libpng
    - tbb  # [osx]
 
 test:

@@ -13,11 +13,11 @@ if [ "$(uname -s)" == "Darwin" ]; then
   DYNAMIC_EXT="dylib"
 fi
 
-export CFLAGS="-I$INCLUDE_PATH"
+export CFLAGS="-I$INCLUDE_PATH -DVL_DISABLE_SSE2=1 -DVL_DISABLE_AVX=1 -DVL_DISABLE_OPENMP=1 -DVL_DISABLE_THREADS=1"
 export LDFLAGS="-L$LIBRARY_PATH"
 
 # Turn off all optimisations. Use vlfeat_avx for a fast version
-make NO_TESTS=yes ARCH=${VL_ARCH} DISABLE_SSE2=yes DISABLE_AVX=yes DISABLE_THREADS=yes DISABLE_OPENMP=yes-j${CPU_COUNT}
+make NO_TESTS=yes ARCH=${VL_ARCH} DISABLE_SSE2=yes DISABLE_AVX=yes DISABLE_THREADS=yes DISABLE_OPENMP=yes -j${CPU_COUNT}
 
 mkdir -p $PREFIX/bin
 cp bin/${VL_ARCH}/sift $PREFIX/bin/
