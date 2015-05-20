@@ -7,12 +7,12 @@ source:
   url: http://www.vlfeat.org/download/vlfeat-0.9.20-bin.tar.gz
 
   patches:
-    - no_test.patch
+    - no_test.patch  # [unix]
 
 test:
   commands: 
-    - sift -h
-
+    - sift -h      # [unix]
+    - sift.exe -h  # [win]
 about:
   home: http://www.vlfeat.org/
   license: BSD
