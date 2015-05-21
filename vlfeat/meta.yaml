@@ -12,7 +12,7 @@ source:
 test:
   commands: 
     - sift -h      # [unix]
-    - sift.exe -h  # [win]
+    - ..\..\envs\_test\Library\bin\sift.exe -h  # [win]
 about:
   home: http://www.vlfeat.org/
   license: BSD
