@@ -1,0 +1,90 @@
+# This CMAKE project is designed for me to build FFTW for linking when using
+# Python projects on Windows. Therefore, it is only really tested using VS 2008.
+# It also only builds FFTW and FFTWf, and doesn't build the benchmark nor the
+# long version.
+# Finally, threading is disabled in by default as I was unable to get it working
+# using my setup with OpenMP.
+project (libfftw-3.3.4)
+cmake_minimum_required(VERSION 2.8)
+
+# Add an option to enable threading. I haven't managed to get this to build
+# properly with threading enabled using the VS express editions.
+option(FFTW_THREADING "Enable threading + OpenMP in this FFTW build. Currently this is known to cause linking issues." OFF)
+
+# Add the include directors. The config.h supplied should be copied into
+# the root directory.
+include_directories (
+    .
+    api
+    kernel
+    dft
+    dft/simd
+    dft/scalar
+    rdft
+    rdft/simd
+    rdft/scalar
+    reodft
+    simd-support
+    threads
+)
+
+if (MSVC)
+    if (FFTW_THREADING)
+        add_definitions (/openmp)
+    endif (FFTW_THREADING)
+    
+    add_definitions (/arch:SSE2 /fp:precise /D FFTW_DLL /D _USRDLL /D _WINDLL)
+    # HAVE_STDINT_H is undefined in config.h because Visual Studio 2008 doesn't 
+    # support it. However, it may work in VS 2010, and thus could be enabled by 
+    # adding
+    # /D HAVE_STDINT_H
+    # above.
+   
+    # Debug mode is TOTALLY untested.
+    set (CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /INCREMENTAL:NO")
+    set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /O2 /Oi /Oy- /GL")
+endif (MSVC)
+
+# Set up all the source files.
+file (GLOB API_SRCS api/*.c)
+file (GLOB DFT_SRCS dft/*.c)
+file (GLOB DFT_SIMD_SRCS dft/simd/sse2/*.c)
+file (GLOB DFT_SCALAR_SRCS dft/scalar/*.c 
+                           dft/scalar/codelets/*.c)
+file (GLOB KERNEL_SRCS kernel/*.c)
+file (GLOB RDFT_SRCS rdft/*.c)
+file (GLOB RDFT_SIMD_SRCS rdft/simd/sse2/*.c)
+file (GLOB RDFT_SCALAR_SRCS rdft/scalar/*.c 
+                            rdft/scalar/r2r/*.c 
+                            rdft/scalar/r2cf/*.c 
+                            rdft/scalar/r2cb/*.c)
+file (GLOB REODFT_SRCS reodft/*.c)
+set (SIMD_SUPPORT_SRCS simd-support/sse2-nonportable.c 
+                       simd-support/sse2.c 
+                       simd-support/taint.c)
+
+set (ALL_SRCS ${API_SRCS} ${DFT_SRCS} ${DFT_SCALAR_SRCS} ${DFT_SIMD_SRCS} 
+              ${KERNEL_SRCS} ${RDFT_SRCS} ${RDFT_SCALAR_SRCS} ${RDFT_SIMD_SRCS} 
+              ${REODFT_SRCS} ${SIMD_SUPPORT_SRCS})
+              
+if (FFTW_THREADING)
+    set (THREADS_SRCS threads/api.c 
+                      threads/conf.c 
+                      threads/ct.c 
+                      threads/dft-vrank-geq1.c 
+                      threads/f77api.c 
+                      threads/hc2hc.c 
+                      threads/rdft-vrank-geq1.c 
+                      threads/openmp.c 
+                      threads/vrank-geq1-rdft2.c)
+    set (ALL_SRCS ${ALL_SRCS} ${THREADS_SRCS})
+endif (FFTW_THREADING)
+
+# Double Precision FFTW3
+add_library (libfftw3 SHARED ${ALL_SRCS})
+
+# Single Precision FFTW3
+# Here, I am handling building the single precision FFTW via the CMAKE script
+# rather than via the config.h
+add_library (libfftw3f SHARED ${ALL_SRCS})
+set_target_properties(libfftw3f PROPERTIES COMPILE_DEFINITIONS FFTW_SINGLE)
