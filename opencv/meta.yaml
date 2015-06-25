@@ -9,7 +9,7 @@ source:
 
 requirements:
   build:
-   - cmake  [win]
+   - cmake  # [win]
    - numpy
    - eigen
    - tbb  # [osx]
