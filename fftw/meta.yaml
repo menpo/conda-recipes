@@ -6,17 +6,21 @@ package:
   version: "3.3.4"
 
 source:
-    fn: fftw-3.3.4.tar.gz
-    url: http://www.fftw.org/fftw-3.3.4.tar.gz
-    md5: 2edab8c06b24feeb3b82bbb3ebf3e7b3
+    fn: fftw-3.3.4.tar.gz  # [unix]
+    url: http://www.fftw.org/fftw-3.3.4.tar.gz  # [unix]
+    md5: 2edab8c06b24feeb3b82bbb3ebf3e7b3  # [unix]
+    fn:  fftw-3.3.4-dll32.zip  # [win32]
+    url:  ftp://ftp.fftw.org/pub/fftw/fftw-3.3.4-dll32.zip  # [win32]
+    fn:  fftw-3.3.4-dll64.zip  # [win64]
+    url:  ftp://ftp.fftw.org/pub/fftw/fftw-3.3.4-dll64.zip  # [win64]
 
 # Require system for the libm library
 requirements:
   build:
-    - system  # [unix]
+    - system
 
   run:
-    - system  # [unix]
+    - system
 
 # NOTE: the test command is run after the package is built and installed.
 # So the conda fftw package doesn't include the fftw test suite. Instead,
