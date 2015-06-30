@@ -17,10 +17,10 @@ source:
 # Require system for the libm library
 requirements:
   build:
-    - system  # [unix]
+    - system  # [linux]
 
   run:
-    - system  # [unix]
+    - system  # [linux]
 
 # NOTE: the test command is run after the package is built and installed.
 # So the conda fftw package doesn't include the fftw test suite. Instead,

@@ -3,6 +3,8 @@
 # Inspired by the Arch package for fftw
 # https://projects.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/fftw
 
+INCLUDE_PATH=$PREFIX/include
+LIBRARY_PATH=$PREFIX/lib
 # When I build fftw on Arch, it uses a later version of glibc than the anaconda
 # packages use. This is problematic because it tries to link not with the
 # system libm.so, but with the version provided by the "system" conda package.
