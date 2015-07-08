@@ -1,0 +1,34 @@
+package:
+  name: pymatbridge
+  version: 0.5.2
+
+source:
+  fn: python-matlab-bridge-0.5.2.tar.gz
+  url: https://github.com/arokem/python-matlab-bridge/archive/0.5.2.tar.gz
+  md5: ba392874d77b08a643b9ccda106a8c30
+
+  patches:
+    - messenger_cpp.patch
+    - messenger_char_cast.patch
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - pyzmq
+    - zeromq  # [win]
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - pyzmq
+
+test:
+  imports:
+    - pymatbridge
+
+about:
+  home: http://arokem.github.io/python-matlab-bridge
+  license: BSD

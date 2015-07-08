@@ -1,0 +1,11 @@
+--- pymatbridge/messenger/src/messenger.c
++++ pymatbridge/messenger/src/messenger.c
+@@ -98,7 +98,7 @@
+     /* Listen over an existing socket */
+     } else if (strcmp(cmd, "listen") == 0) {
+         int byte_recvd;
+-        char *recv_buffer = mxCalloc(BUFLEN, sizeof(char));
++        char *recv_buffer = (char*)mxCalloc(BUFLEN, sizeof(char));
+         zmq_pollitem_t polls[] = {{socket_ptr, 0, ZMQ_POLLIN, 0}};
+         
+         if (!checkInitialized()) return;

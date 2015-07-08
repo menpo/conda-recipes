@@ -1,0 +1,20 @@
+--- pymatbridge/messenger/make.py
++++ pymatbridge/messenger/make.py
+@@ -188,7 +188,7 @@
+ def build_octave():
+     paths = "-L%(octave_lib)s -I%(octave_inc)s -L%(zmq_lib)s -I%(zmq_inc)s"
+     paths = paths % get_config()
+-    make_cmd = "mkoctfile --mex %s -lzmq ./src/messenger.c" % paths
++    make_cmd = "mkoctfile --mex %s -lzmq ./src/messenger.cpp" % paths
+     do_build(make_cmd, 'messenger.mex')
+ 
+ 
+@@ -264,7 +264,7 @@
+     # Build the mex file
+     mex = esc(os.path.join(matlab_bin, "mex"))
+     paths = "-L%(zmq_lib)s -I%(zmq_inc)s" % cfg
+-    make_cmd = '%s -O %s -lzmq ./src/messenger.c' % (mex, paths)
++    make_cmd = '%s -O %s -lzmq ./src/messenger.cpp' % (mex, paths)
+     if static:
+         make_cmd += ' -DZMQ_STATIC'
+     do_build(make_cmd, 'messenger.%s' % extension)
