@@ -1,0 +1,195 @@
+diff --git pystan/math/stan/math/rev/scal/fun/acosh.hpp pystan/math/stan/math/rev/scal/fun/acosh.hpp
+index f058b13..7b18828 100644
+--- pystan/math/stan/math/rev/scal/fun/acosh.hpp
++++ pystan/math/stan/math/rev/scal/fun/acosh.hpp
+@@ -6,6 +6,11 @@
+ #include <boost/math/special_functions/fpclassify.hpp>
+ #include <cmath>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/acosh.hpp>
++using boost::math::acosh;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/asinh.hpp pystan/math/stan/math/rev/scal/fun/asinh.hpp
+index 662c7b1..28bc1d8 100644
+--- pystan/math/stan/math/rev/scal/fun/asinh.hpp
++++ pystan/math/stan/math/rev/scal/fun/asinh.hpp
+@@ -7,6 +7,11 @@
+ #include <cmath>
+ #include <valarray>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/asinh.hpp>
++using boost::math::asinh;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/atanh.hpp pystan/math/stan/math/rev/scal/fun/atanh.hpp
+index d8bf79a..63ddf13 100644
+--- pystan/math/stan/math/rev/scal/fun/atanh.hpp
++++ pystan/math/stan/math/rev/scal/fun/atanh.hpp
+@@ -6,6 +6,11 @@
+ #include <cmath>
+ #include <limits>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/atanh.hpp>
++using boost::math::atanh;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/cbrt.hpp pystan/math/stan/math/rev/scal/fun/cbrt.hpp
+index 5dc63f8..722f89a 100644
+--- pystan/math/stan/math/rev/scal/fun/cbrt.hpp
++++ pystan/math/stan/math/rev/scal/fun/cbrt.hpp
+@@ -4,6 +4,12 @@
+ #include <math.h>
+ #include <stan/math/rev/core.hpp>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/cbrt.hpp>
++using boost::math::cbrt;
++#endif
++
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/erf.hpp pystan/math/stan/math/rev/scal/fun/erf.hpp
+index 6c01a81..c64b04b 100644
+--- pystan/math/stan/math/rev/scal/fun/erf.hpp
++++ pystan/math/stan/math/rev/scal/fun/erf.hpp
+@@ -7,6 +7,11 @@
+ #include <cmath>
+ #include <valarray>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/erf.hpp>
++using boost::math::erf;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/erfc.hpp pystan/math/stan/math/rev/scal/fun/erfc.hpp
+index 0a88d30..a6df5f2 100644
+--- pystan/math/stan/math/rev/scal/fun/erfc.hpp
++++ pystan/math/stan/math/rev/scal/fun/erfc.hpp
+@@ -7,6 +7,11 @@
+ #include <cmath>
+ #include <valarray>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/erf.hpp>
++using boost::math::erfc;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/expm1.hpp pystan/math/stan/math/rev/scal/fun/expm1.hpp
+index bb11f65..f2eb7c8 100644
+--- pystan/math/stan/math/rev/scal/fun/expm1.hpp
++++ pystan/math/stan/math/rev/scal/fun/expm1.hpp
+@@ -7,6 +7,11 @@
+ #include <cmath>
+ #include <valarray>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/expm1.hpp>
++using boost::math::expm1;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/fma.hpp pystan/math/stan/math/rev/scal/fun/fma.hpp
+index 79e3d0a..7351405 100644
+--- pystan/math/stan/math/rev/scal/fun/fma.hpp
++++ pystan/math/stan/math/rev/scal/fun/fma.hpp
+@@ -9,6 +9,13 @@
+ #include <valarray>
+ #include <limits>
+ 
++#ifdef _MSC_VER
++template<typename T> 
++T fma(T x, T y, T z) {
++    return x*y+z;
++}
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/log1m_exp.hpp pystan/math/stan/math/rev/scal/fun/log1m_exp.hpp
+index 4088895..e6ba472 100644
+--- pystan/math/stan/math/rev/scal/fun/log1m_exp.hpp
++++ pystan/math/stan/math/rev/scal/fun/log1m_exp.hpp
+@@ -6,6 +6,11 @@
+ #include <stan/math/rev/scal/fun/calculate_chain.hpp>
+ #include <cmath>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/expm1.hpp>
++using boost::math::expm1;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/log_diff_exp.hpp pystan/math/stan/math/rev/scal/fun/log_diff_exp.hpp
+index 36f4ad5..214ec72 100644
+--- pystan/math/stan/math/rev/scal/fun/log_diff_exp.hpp
++++ pystan/math/stan/math/rev/scal/fun/log_diff_exp.hpp
+@@ -6,6 +6,11 @@
+ #include <stan/math/prim/scal/fun/log_diff_exp.hpp>
+ #include <cmath>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/expm1.hpp>
++using boost::math::expm1;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/owens_t.hpp pystan/math/stan/math/rev/scal/fun/owens_t.hpp
+index b0132b5..08be5fb 100644
+--- pystan/math/stan/math/rev/scal/fun/owens_t.hpp
++++ pystan/math/stan/math/rev/scal/fun/owens_t.hpp
+@@ -8,6 +8,11 @@
+ #include <boost/math/special_functions/owens_t.hpp>
+ #include <cmath>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/erf.hpp>
++using boost::math::erf;
++#endif
++
+ namespace stan {
+   namespace math {
+ 
+diff --git pystan/math/stan/math/rev/scal/fun/trunc.hpp pystan/math/stan/math/rev/scal/fun/trunc.hpp
+index 5cf93a7..3087ac0 100644
+--- pystan/math/stan/math/rev/scal/fun/trunc.hpp
++++ pystan/math/stan/math/rev/scal/fun/trunc.hpp
+@@ -6,6 +6,11 @@
+ #include <boost/math/special_functions/fpclassify.hpp>
+ #include <limits>
+ 
++#ifdef _MSC_VER
++#include <boost/math/special_functions/trunc.hpp>
++using boost::math::trunc;
++#endif
++
+ namespace stan {
+   namespace math {
+ 

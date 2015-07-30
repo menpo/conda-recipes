@@ -1,23 +1,25 @@
 --- setup.py
 +++ setup.py
-@@ -119,7 +119,7 @@ libstan = ('stan', {'sources': libstan_sources,
-                     'macros': stan_macros})
- 
- ## extensions
--extensions_extra_compile_args = ['-O0', '-ftemplate-depth-256']
-+extensions_extra_compile_args = ['/EHsc', '/Ox', '-DBOOST_DATE_TIME_NO_LIB']
- 
- stanc_sources = [
-     "pystan/stan/src/stan/gm/ast_def.cpp",                                    
+@@ -109,7 +109,5 @@
+ ]
+ extra_compile_args = [
+-    '-O0',
+-    '-ftemplate-depth-256',
+-    '-Wno-unused-function',
+-    '-Wno-uninitialized',
++    '/EHsc',
++    '-DBOOST_DATE_TIME_NO_LIB'
+ ]
 
---- pystan\model.py
-+++ pystan\model.py
-@@ -279,7 +280,7 @@
-             s = template.safe_substitute(model_cppname=self.model_cppname)
-             outfile.write(s)
- 
--        extra_compile_args = ['-O3', '-ftemplate-depth-256']
-+        extra_compile_args = ['/EHsc', '/Ox', '-DBOOST_DATE_TIME_NO_LIB']
-         distutils.log.set_verbosity(verbose)
-         extension = Extension(name=module_name,
-                               language="c++",
+--- pystan/model.py
++++ pystan/model.py
+@@ -289,7 +289,5 @@
+        ]
+        extra_compile_args = [
+-            '-O0',
+-            '-ftemplate-depth-256',
+-            '-Wno-unused-function',
+-            '-Wno-uninitialized',
++            '/EHsc',
++            '-DBOOST_DATE_TIME_NO_LIB'
+        ]
