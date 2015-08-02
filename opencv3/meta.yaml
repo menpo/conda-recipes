@@ -1,0 +1,29 @@
+package:
+  name: opencv
+  version: 3.0
+
+source:
+  fn: opencv-3.0.0.tar.gz
+  url: https://github.com/Itseez/opencv/archive/3.0.0.tar.gz
+  sha256: da51a4e459b0bcbe14fb847c4f168415f421765fb91996f42b9e1ce0575f05d5
+
+requirements:
+  build:
+   - python
+   - cmake  [win]
+   - numpy
+   - eigen
+   - tbb  # [osx]
+
+  run:
+   - python
+   - numpy
+   - tbb  # [osx]
+
+test:
+  imports:
+    - cv2
+
+about:
+  home: http://opencv.org/
+  license: BSD
