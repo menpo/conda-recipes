@@ -1,4 +1,3 @@
 @echo off
-copy /y bin\*.dll %PREFIX%\ > nul
-copy /y bin\cmake.exe %PREFIX%\ > nul
-xcopy share %PREFIX%\share /E /I > nul
+xcopy bin %LIBRARY_BIN%\bin /E /I > nul
+xcopy share %LIBRARY_BIN%\share /E /I > nul
