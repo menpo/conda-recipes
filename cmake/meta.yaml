@@ -3,10 +3,13 @@ package:
   version: 3.3.0
 
 source:
-  fn: cmake-3.3.0-win32-x86.zip [win]
-  url: http://www.cmake.org/files/v3.3/cmake-3.3.0-win32-x86.zip [win]
-  md5: 5fb1ff2e1156d0b851efc81a841e2807 [win]
-  
+  fn: cmake-3.3.0-win32-x86.zip  # [win]
+  url: http://www.cmake.org/files/v3.3/cmake-3.3.0-win32-x86.zip  # [win]
+  md5: 5fb1ff2e1156d0b851efc81a841e2807  # [win]
+  fn: cmake_install.sh  # [linux]
+  url: http://www.cmake.org/files/v3.3/cmake-3.3.0-Linux-x86_64.sh  # [linux]
+  md5: 324ab2e818b9ceab40edaf0828a07cc1  # [linux] 
+
 about:
   home: http://www.cmake.org/
   license: BSD
