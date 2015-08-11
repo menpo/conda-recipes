@@ -1,5 +1,9 @@
 @echo off
 
+echo "Copying stdint.h for windows"
+cp "%LIBRARY_INC%\stdint.h" "modules\videoio\src\stdint.h"
+cp "%LIBRARY_INC%\stdint.h" "modules\calib3d\src\stdint.h"
+
 mkdir build
 cd build
 
@@ -21,33 +25,38 @@ if %ARCH%==64 (
   )
 )
 
-rem I had to take out the PNG_LIBRARY because it included
-rem a Windows path which caused it to be wrongly escaped
-rem and thus an error. Somehow though, CMAKE still finds
-rem the correct png library...
+set PY_INCLUDE_PATH="%PREFIX%\include"
+set PY_INCLUDE_PATH=%PY_INCLUDE_PATH:\=/%
+
+set PY_LIBRARY="%PREFIX%\libs\python27.lib"
+set PY_LIBRARY=%PY_LIBRARY:\=/%
+
+set PY_SP_DIR="%SP_DIR%"
+set PY_SP_DIR=%PY_SP_DIR:\=/%
+
+set PY_EXEC="%PYTHON%"
+set PY_EXEC=%PY_EXEC:\=/%
+
 cmake .. -G%CMAKE_GENERATOR%                        ^
+    -DWITH_EIGEN=1                                  ^
     -DBUILD_TESTS=0                                 ^
     -DBUILD_DOCS=0                                  ^
     -DBUILD_PERF_TESTS=0                            ^
-    -DBUILD_ZLIB=0                                  ^
+    -DBUILD_ZLIB=1                                  ^
     -DBUILD_TIFF=1                                  ^
-    -DBUILD_PNG=0                                   ^
-    -DBUILD_OPENEXR=0                               ^
-    -DBUILD_JASPER=0                                ^
-    -DBUILD_JPEG=0                                  ^
-    -DJPEG_INCLUDE_DIR="%LIBRARY_INC%"                ^
-    -DJPEG_LIBRARY="%LIBRARY_LIB%\libjpeg.lib"        ^
-    -DPNG_PNG_INCLUDE_DIR="%LIBRARY_INC%"             ^
-    -DZLIB_INCLUDE_DIR="%LIBRARY_INC%"                ^
-    -DZLIB_LIBRARY="%LIBRARY_LIB%\zlib.lib"           ^
-    -DPYTHON_EXECUTABLE="%PREFIX%\python.exe"         ^
-    -DPYTHON_INCLUDE_PATH="%PREFIX%\include"          ^
-    -DPYTHON_LIBRARY="%PREFIX%\libs\python27.lib"     ^
-    -DPYTHON_PACKAGES_PATH="%SP_DIR%"                 ^
+    -DBUILD_PNG=1                                   ^
+    -DBUILD_OPENEXR=1                               ^
+    -DBUILD_JASPER=1                                ^
+    -DBUILD_JPEG=1                                  ^
     -DWITH_CUDA=0                                   ^
     -DWITH_OPENCL=0                                 ^
     -DWITH_OPENNI=0                                 ^
     -DWITH_FFMPEG=0                                 ^
+    -DPYTHON2_EXECUTABLE=%PY_EXEC%                  ^
+    -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH%         ^
+    -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH%         ^
+    -DPYTHON2_LIBRARY=%PY_LIBRARY%                  ^
+    -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%             ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"
 
 cmake --build . --config %CMAKE_CONFIG% --target ALL_BUILD
@@ -62,8 +71,3 @@ rmdir "%LIBRARY_PREFIX%\%OPENCV_ARCH%" /S /Q
 rem By default cv.py is installed directly in site-packages
 rem Therefore, we have to copy all of the dlls directly into it!
 xcopy "%LIBRARY_LIB%\opencv*.dll" "%SP_DIR%"
-
-rem We have to copy libpng.dll and zlib.dll for runtime
-rem dependencies, similar to copying opencv above.
-xcopy "%LIBRARY_BIN%\libpng15.dll" "%SP_DIR%"
-xcopy "%LIBRARY_BIN%\zlib.dll" "%SP_DIR%"

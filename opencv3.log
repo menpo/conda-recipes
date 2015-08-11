@@ -1,0 +1,1533 @@
+Removing old build directory
+Removing old work directory
+BUILD START: opencv-3.0-np19py27_0
+Fetching package metadata: ........
+Solving package specifications: .
+CLINK [1;32;40mC:\Anaconda\32\conda-bld\work\opencv-3.0.0 {git} 
+[1;30;40m{lamb} [0mcall "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" x86 
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+
+CLINK [1;32;40mC:\Anaconda\32\conda-bld\work\opencv-3.0.0 {git} 
+[1;30;40m{lamb} [0mREM ===== end generated header ===== 
+"Copying stdint.h for windows"
+cp: cannot create regular file `..\\modules\\videoio\\src\\stdint.h': No such file or directory
+cp: cannot create regular file `..\\modules\\calib3d\\src\\stdint.h': No such file or directory
+-- The CXX compiler identification is MSVC 15.0.30729.1
+-- The C compiler identification is MSVC 15.0.30729.1
+-- Check for working CXX compiler using: Visual Studio 9 2008
+-- Check for working CXX compiler using: Visual Studio 9 2008 -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working C compiler using: Visual Studio 9 2008
+-- Check for working C compiler using: Visual Studio 9 2008 -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Performing Test HAVE_CXX_FSIGNED_CHAR
+-- Performing Test HAVE_CXX_FSIGNED_CHAR - Failed
+-- Performing Test HAVE_C_FSIGNED_CHAR
+-- Performing Test HAVE_C_FSIGNED_CHAR - Failed
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - not found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Looking for fseeko
+-- Looking for fseeko - not found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
+-- Check size of off64_t
+-- Check size of off64_t - failed
+-- Looking for assert.h
+-- Looking for assert.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for io.h
+-- Looking for io.h - found
+-- Looking for jbg_newlen
+-- Looking for jbg_newlen - not found
+-- Looking for mmap
+-- Looking for mmap - not found
+-- Looking for search.h
+-- Looking for search.h - found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
+-- ICV: Downloading ippicv_windows_20141027.zip...
+-- ICV: Unpacking ippicv_windows_20141027.zip to C:/Anaconda/32/conda-bld/work/opencv-3.0.0/3rdparty/ippicv/unpack...
+-- ICV: Package successfully downloaded
+-- found IPP (ICV version): 8.2.1 [8.2.1]
+-- at: C:/Anaconda/32/conda-bld/work/opencv-3.0.0/3rdparty/ippicv/unpack/ippicv_win
+-- Found PythonInterp: C:/Anaconda/32/envs/_build/python.exe (found suitable version "2.7.10", minimum required is "2.7") 
+-- Found PythonLibs: C:/Anaconda/32/envs/_build/libs/python27.lib (found suitable exact version "2.7.10") 
+-- Could NOT find PythonInterp: Found unsuitable version "2.7.10", but required is at least "3.4" (found C:/Anaconda/32/envs/_build/python.exe)
+-- Could NOT find PythonInterp: Found unsuitable version "2.7.10", but required is at least "3.2" (found C:/Anaconda/32/envs/_build/python.exe)
+-- Could NOT find JNI (missing:  JAVA_AWT_LIBRARY JAVA_JVM_LIBRARY JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 JAVA_AWT_INCLUDE_PATH) 
+-- Found Matlab: C:/Program Files/MATLAB/R2015a/bin/mex.bat  
+-- VTK is not found. Please set -DVTK_DIR in CMake to VTK build directory, or to VTK install subdirectory with VTKConfig.cmake file
+--   videoio: Removing WinRT API headers by default
+-- 
+-- General configuration for OpenCV 3.0.0 =====================================
+--   Version control:               unknown
+-- 
+--   Platform:
+--     Host:                        Windows 6.1 AMD64
+--     CMake:                       2.8.12.2
+--     CMake generator:             Visual Studio 9 2008
+--     CMake build tool:            C:/PROGRA~2/MICROS~1.0/Common7/IDE/devenv.com
+--     MSVC:                        1500
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      YES
+--     C++ Compiler:                C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/bin/cl.exe  (ver 15.0.30729.1)
+--     C++ flags (Release):         /DWIN32 /D_WINDOWS /W4 /GR /EHa  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /arch:SSE2 /Oi /fp:fast  /wd4251 /wd4324 /MP1  /MD /O2 /Ob2 /D NDEBUG  /Zi
+--     C++ flags (Debug):           /DWIN32 /D_WINDOWS /W4 /GR /EHa  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /arch:SSE2 /Oi /fp:fast  /wd4251 /wd4324 /MP1  /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1 
+--     C Compiler:                  C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/bin/cl.exe
+--     C flags (Release):           /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /arch:SSE2 /Oi /fp:fast    /MP1  /MD /O2 /Ob2 /D NDEBUG  /Zi
+--     C flags (Debug):             /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /arch:SSE2 /Oi /fp:fast    /MP1  /D_DEBUG /MDd /Zi /Ob0 /Od /RTC1 
+--     Linker flags (Release):      /machine:X86   /INCREMENTAL:NO  /debug
+--     Linker flags (Debug):        /machine:X86   /debug /INCREMENTAL:YES 
+--     Precompiled headers:         YES
+--     Extra dependencies:          comctl32 gdi32 ole32 setupapi ws2_32 vfw32
+--     3rdparty dependencies:       zlib libjpeg libwebp libpng libtiff libjasper IlmImf ippicv
+-- 
+--   OpenCV modules:
+--     To be built:                 hal core flann imgproc ml photo video imgcodecs shape videoio highgui objdetect superres ts features2d calib3d stitching videostab python2
+--     Disabled:                    world
+--     Disabled by dependency:      -
+--     Unavailable:                 cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev java python3 viz
+-- 
+--   Windows RT support:            NO
+-- 
+--   GUI: 
+--     QT:                          NO
+--     Win32 UI:                    YES
+--     OpenGL support:              NO
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        build (ver 1.2.8)
+--     JPEG:                        build (ver 90)
+--     WEBP:                        build (ver 0.3.1)
+--     PNG:                         build (ver 1.5.12)
+--     TIFF:                        build (ver 42 - 4.0.2)
+--     JPEG 2000:                   build (ver 1.900.1)
+--     OpenEXR:                     build (ver 1.7.1)
+--     GDAL:                        NO
+-- 
+--   Video I/O:
+--     Video for Windows:           YES
+--     DC1394 1.x:                  NO
+--     DC1394 2.x:                  NO
+--     FFMPEG:                      NO
+--       codec:                     NO
+--       format:                    NO
+--       util:                      NO
+--       swscale:                   NO
+--       resample:                  NO
+--       gentoo-style:              NO
+--     OpenNI:                      NO
+--     OpenNI PrimeSensor Modules:  NO
+--     OpenNI2:                     NO
+--     PvAPI:                       NO
+--     GigEVisionSDK:               NO
+--     DirectShow:                  YES
+--     Media Foundation:            NO
+--     XIMEA:                       NO
+--     Intel PerC:                  NO
+-- 
+--   Other third-party libraries:
+--     Use IPP:                     8.2.1 [8.2.1]
+--          at:                     C:/Anaconda/32/conda-bld/work/opencv-3.0.0/3rdparty/ippicv/unpack/ippicv_win
+--     Use IPP Async:               NO
+--     Use Eigen:                   YES (ver 3.2.2)
+--     Use TBB:                     NO
+--     Use OpenMP:                  NO
+--     Use GCD                      NO
+--     Use Concurrency              NO
+--     Use C=:                      NO
+--     Use pthreads for parallel for:
+--                                  NO
+--     Use Cuda:                    NO
+--     Use OpenCL:                  NO
+-- 
+--   Python 2:
+--     Interpreter:                 C:/Anaconda/32/envs/_build/python.exe (ver 2.7.10)
+--     Libraries:                   C:/Anaconda/32/envs/_build/libs/python27.lib (ver 2.7.10)
+--     numpy:                       C:/Anaconda/32/envs/_build/lib/site-packages/numpy/core/include (ver 1.9.2)
+--     packages path:               C:/Anaconda/32/envs/_build/Lib/site-packages
+-- 
+--   Python 3:
+--     Interpreter:                 NO
+-- 
+--   Python (for build):            C:/Anaconda/32/envs/_build/python.exe
+-- 
+--   Java:
+--     ant:                         NO
+--     JNI:                         NO
+--     Java wrappers:               NO
+--     Java tests:                  NO
+-- 
+--   Matlab:
+--     mex:                         C:/Program Files/MATLAB/R2015a/bin/mex.bat
+--     Compiler/generator:          Not working (bindings will not be generated)
+-- 
+--   Tests and samples:
+--     Tests:                       NO
+--     Performance tests:           NO
+--     C/C++ Examples:              NO
+-- 
+--   Install path:                  C:/Anaconda/32/envs/_build/Library
+-- 
+--   cvconfig.h is in:              C:/Anaconda/32/conda-bld/work/opencv-3.0.0/build
+-- -----------------------------------------------------------------
+-- 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Anaconda/32/conda-bld/work/opencv-3.0.0/build
+
+Microsoft (R) Visual Studio Version 9.0.21022.8.
+Copyright (C) Microsoft Corp. All rights reserved.
+------ Build started: Project: zlib, Configuration: Release Win32 ------
+Compiling...
+adler32.c
+zutil.c
+uncompr.c
+trees.c
+inffast.c
+inftrees.c
+infback.c
+inflate.c
+gzwrite.c
+gzread.c
+gzlib.c
+gzclose.c
+deflate.c
+crc32.c
+compress.c
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\zlib\zlib.dir\Release\BuildLog.htm"
+zlib - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_hal, Configuration: Release Win32 ------
+Compiling...
+opencv_hal_pch.cpp
+Compiling...
+warp.cpp
+stat.cpp
+resize.cpp
+matrix.cpp
+mathfuncs.cpp
+filter.cpp
+color.cpp
+arithm.cpp
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\hal\opencv_hal.dir\Release\BuildLog.htm"
+opencv_hal - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_core, Configuration: Release Win32 ------
+Generating opencl_kernels_core.cpp, opencl_kernels_core.hpp
+Compiling...
+opencv_core_pch.cpp
+Compiling...
+opencl_kernels_core.cpp
+opencl_core.cpp
+opencl_clamdfft.cpp
+opencl_clamdblas.cpp
+umatrix.cpp
+types.cpp
+tables.cpp
+system.cpp
+stl.cpp
+stat.cpp
+rand.cpp
+persistence.cpp
+pca.cpp
+parallel_pthreads.cpp
+parallel.cpp
+out.cpp
+opengl.cpp
+ocl.cpp
+matrix.cpp
+matop.cpp
+Generating Code...
+Compiling...
+matmul.cpp
+mathfuncs.cpp
+lpsolver.cpp
+lda.cpp
+lapack.cpp
+kmeans.cpp
+gl_core_3_1.cpp
+glob.cpp
+dxt.cpp
+downhill_simplex.cpp
+directx.cpp
+datastructs.cpp
+cuda_stream.cpp
+cuda_info.cpp
+cuda_host_mem.cpp
+cuda_gpu_mat.cpp
+copy.cpp
+convert.cpp
+conjugate_gradient.cpp
+command_line_parser.cpp
+Generating Code...
+Compiling...
+array.cpp
+arithm.cpp
+alloc.cpp
+algorithm.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_core300.lib and object ..\..\lib\Release\opencv_core300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\core\opencv_core.dir\Release\BuildLog.htm"
+opencv_core - 0 error(s), 0 warning(s)
+------ Build started: Project: libtiff, Configuration: Release Win32 ------
+Compiling...
+tif_stream.cxx
+Compiling...
+tif_aux.c
+tif_win32.c
+tif_zip.c
+tif_write.c
+tif_warning.c
+tif_version.c
+tif_tile.c
+tif_thunder.c
+tif_swab.c
+tif_strip.c
+tif_read.c
+tif_print.c
+tif_predict.c
+tif_pixarlog.c
+tif_packbits.c
+tif_open.c
+tif_ojpeg.c
+tif_next.c
+tif_lzw.c
+tif_lzma.c
+Generating Code...
+Compiling...
+tif_luv.c
+tif_jpeg.c
+tif_jpeg_12.c
+tif_jbig.c
+tif_getimage.c
+tif_flush.c
+tif_fax3sm.c
+tif_fax3.c
+tif_extension.c
+tif_error.c
+tif_dumpmode.c
+tif_dirwrite.c
+tif_dirread.c
+tif_dirinfo.c
+tif_dir.c
+tif_compress.c
+tif_color.c
+tif_codec.c
+tif_close.c
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\libtiff\libtiff.dir\Release\BuildLog.htm"
+libtiff - 0 error(s), 0 warning(s)
+------ Build started: Project: libwebp, Configuration: Release Win32 ------
+Compiling...
+utils.c
+thread.c
+rescaler.c
+quant_levels_dec.c
+quant_levels.c
+huffman_encode.c
+huffman.c
+filters.c
+color_cache.c
+bit_writer.c
+bit_reader.c
+muxread.c
+muxinternal.c
+muxedit.c
+webpenc.c
+token.c
+syntax.c
+picture.c
+iterator.c
+histogram.c
+Generating Code...
+Compiling...
+filter.c
+cost.c
+config.c
+backward_references.c
+analysis.c
+yuv.c
+upsampling_sse2.c
+upsampling_neon.c
+upsampling.c
+lossless.c
+enc_sse2.c
+enc_neon.c
+enc.c
+dec_sse2.c
+dec_neon.c
+dec.c
+cpu.c
+webp.c
+vp8.c
+io.c
+Generating Code...
+Compiling...
+idec.c
+buffer.c
+Generating Code...
+Compiling...
+alpha.c
+Compiling...
+vp8l.c
+Compiling...
+tree.c
+Compiling...
+quant.c
+Compiling...
+layer.c
+Compiling...
+frame.c
+Compiling...
+alpha.c
+Compiling...
+vp8l.c
+Compiling...
+tree.c
+Compiling...
+quant.c
+Compiling...
+layer.c
+Compiling...
+frame.c
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\libwebp\libwebp.dir\Release\BuildLog.htm"
+libwebp - 0 error(s), 0 warning(s)
+------ Build started: Project: libjasper, Configuration: Release Win32 ------
+Compiling...
+jas_cm.c
+jpc_util.c
+jpc_tsfb.c
+jpc_tagtree.c
+jpc_t2enc.c
+jpc_t2dec.c
+jpc_t2cod.c
+jpc_t1enc.c
+jpc_t1dec.c
+jpc_t1cod.c
+jpc_qmfb.c
+jpc_mqenc.c
+jpc_mqdec.c
+jpc_mqcod.c
+jpc_mct.c
+jpc_math.c
+jpc_enc.c
+jpc_dec.c
+jpc_cs.c
+jpc_bs.c
+Generating Code...
+Compiling...
+jp2_enc.c
+jp2_dec.c
+jp2_cod.c
+jas_version.c
+jas_tvp.c
+jas_tmr.c
+jas_string.c
+jas_stream.c
+jas_seq.c
+jas_malloc.c
+jas_init.c
+jas_image.c
+jas_iccdata.c
+jas_icc.c
+jas_getopt.c
+jas_debug.c
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\libjasper\libjasper.dir\Release\BuildLog.htm"
+libjasper - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_imgproc, Configuration: Release Win32 ------
+Generating opencl_kernels_imgproc.cpp, opencl_kernels_imgproc.hpp
+Compiling...
+opencv_imgproc_pch.cpp
+Compiling...
+opencl_kernels_imgproc.cpp
+utils.cpp
+undistort.cpp
+thresh.cpp
+templmatch.cpp
+tables.cpp
+sumpixels.cpp
+subdivision2d.cpp
+smooth.cpp
+shapedescr.cpp
+segmentation.cpp
+samplers.cpp
+rotcalipers.cpp
+pyramids.cpp
+phasecorr.cpp
+morph.cpp
+moments.cpp
+min_enclosing_triangle.cpp
+matchcontours.cpp
+lsd.cpp
+Generating Code...
+Compiling...
+linefit.cpp
+intersection.cpp
+imgwarp.cpp
+hough.cpp
+histogram.cpp
+hershey_fonts.cpp
+grabcut.cpp
+geometry.cpp
+generalized_hough.cpp
+gabor.cpp
+floodfill.cpp
+filter.cpp
+featureselect.cpp
+emd.cpp
+drawing.cpp
+distransform.cpp
+deriv.cpp
+demosaicing.cpp
+cornersubpix.cpp
+corner.cpp
+Generating Code...
+Compiling...
+convhull.cpp
+contours.cpp
+connectedcomponents.cpp
+colormap.cpp
+color.cpp
+clahe.cpp
+canny.cpp
+blend.cpp
+approx.cpp
+accum.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_imgproc300.lib and object ..\..\lib\Release\opencv_imgproc300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\imgproc\opencv_imgproc.dir\Release\BuildLog.htm"
+opencv_imgproc - 0 error(s), 0 warning(s)
+------ Build started: Project: libpng, Configuration: Release Win32 ------
+Compiling...
+png.c
+pngwutil.c
+pngwtran.c
+pngwrite.c
+pngwio.c
+pngtrans.c
+pngset.c
+pngrutil.c
+pngrtran.c
+pngrio.c
+pngread.c
+pngpread.c
+pngmem.c
+pngget.c
+pngerror.c
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\libpng\libpng.dir\Release\BuildLog.htm"
+libpng - 0 error(s), 0 warning(s)
+------ Build started: Project: libjpeg, Configuration: Release Win32 ------
+Compiling...
+jaricom.c
+jutils.c
+jquant2.c
+jquant1.c
+jmemmgr.c
+jmemansi.c
+jidctint.c
+jidctfst.c
+jidctflt.c
+jfdctint.c
+jfdctfst.c
+jfdctflt.c
+jerror.c
+jdtrans.c
+jdsample.c
+jdpostct.c
+jdmerge.c
+jdmaster.c
+jdmarker.c
+jdmainct.c
+Generating Code...
+Compiling...
+jdinput.c
+jdhuff.c
+jddctmgr.c
+jdcolor.c
+jdcoefct.c
+jdatasrc.c
+jdatadst.c
+jdarith.c
+jdapistd.c
+jdapimin.c
+jctrans.c
+jcsample.c
+jcprepct.c
+jcparam.c
+jcomapi.c
+jcmaster.c
+jcmarker.c
+jcmainct.c
+jcinit.c
+jchuff.c
+Generating Code...
+Compiling...
+jcdctmgr.c
+jccolor.c
+jccoefct.c
+jcarith.c
+jcapistd.c
+jcapimin.c
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\libjpeg\libjpeg.dir\Release\BuildLog.htm"
+libjpeg - 0 error(s), 0 warning(s)
+------ Build started: Project: IlmImf, Configuration: Release Win32 ------
+Compiling...
+half.cpp
+ImfZipCompressor.cpp
+ImfWav.cpp
+ImfVersion.cpp
+ImfVecAttribute.cpp
+ImfTimeCodeAttribute.cpp
+ImfTimeCode.cpp
+ImfTileOffsets.cpp
+ImfTiledRgbaFile.cpp
+ImfTiledOutputFile.cpp
+ImfTiledMisc.cpp
+ImfTiledInputFile.cpp
+ImfTileDescriptionAttribute.cpp
+ImfThreading.cpp
+ImfTestFile.cpp
+ImfStringVectorAttribute.cpp
+ImfStringAttribute.cpp
+ImfStdIO.cpp
+ImfStandardAttributes.cpp
+ImfScanLineInputFile.cpp
+Generating Code...
+Compiling...
+ImfRleCompressor.cpp
+ImfRgbaYca.cpp
+ImfRgbaFile.cpp
+ImfRationalAttribute.cpp
+ImfRational.cpp
+ImfPxr24Compressor.cpp
+ImfPreviewImageAttribute.cpp
+ImfPreviewImage.cpp
+ImfPizCompressor.cpp
+ImfOutputFile.cpp
+ImfOpaqueAttribute.cpp
+ImfMultiView.cpp
+ImfMisc.cpp
+ImfMatrixAttribute.cpp
+ImfLut.cpp
+ImfLineOrderAttribute.cpp
+ImfKeyCodeAttribute.cpp
+ImfKeyCode.cpp
+ImfIO.cpp
+ImfIntAttribute.cpp
+Generating Code...
+Compiling...
+ImfInputFile.cpp
+ImfHuf.cpp
+ImfHeader.cpp
+ImfFramesPerSecond.cpp
+ImfFrameBuffer.cpp
+ImfFloatAttribute.cpp
+ImfEnvmapAttribute.cpp
+ImfEnvmap.cpp
+ImfDoubleAttribute.cpp
+ImfCRgbaFile.cpp
+ImfConvert.cpp
+ImfCompressor.cpp
+ImfCompressionAttribute.cpp
+ImfChromaticitiesAttribute.cpp
+ImfChromaticities.cpp
+ImfChannelListAttribute.cpp
+ImfChannelList.cpp
+ImfBoxAttribute.cpp
+ImfB44Compressor.cpp
+ImfAttribute.cpp
+Generating Code...
+Compiling...
+ImfAcesFile.cpp
+ImathVec.cpp
+ImathRandom.cpp
+ImathMatrixAlgo.cpp
+ImathFun.cpp
+ImathColorAlgo.cpp
+IlmThreadWin32.cpp
+IlmThreadSemaphoreWin32.cpp
+IlmThreadSemaphore.cpp
+IlmThreadPool.cpp
+IlmThreadMutexWin32.cpp
+IlmThreadMutex.cpp
+IlmThread.cpp
+IexThrowErrnoExc.cpp
+IexBaseExc.cpp
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\3rdparty\openexr\IlmImf.dir\Release\BuildLog.htm"
+IlmImf - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_imgcodecs, Configuration: Release Win32 ------
+Compiling...
+opencv_imgcodecs_pch.cpp
+Compiling...
+rgbe.cpp
+bitstrm.cpp
+grfmt_webp.cpp
+grfmt_tiff.cpp
+grfmt_sunras.cpp
+grfmt_pxm.cpp
+grfmt_png.cpp
+grfmt_jpeg2000.cpp
+grfmt_jpeg.cpp
+grfmt_hdr.cpp
+grfmt_gdal.cpp
+grfmt_exr.cpp
+grfmt_bmp.cpp
+grfmt_base.cpp
+utils.cpp
+loadsave.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_imgcodecs300.lib and object ..\..\lib\Release\opencv_imgcodecs300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\imgcodecs\opencv_imgcodecs.dir\Release\BuildLog.htm"
+opencv_imgcodecs - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_videoio, Configuration: Release Win32 ------
+Compiling...
+opencv_videoio_pch.cpp
+Compiling...
+cap_vfw.cpp
+cap_dshow.cpp
+cap_cmu.cpp
+cap_mjpeg_decoder.cpp
+..\..\..\modules\videoio\src\cap_mjpeg_decoder.cpp(793) : error C2039: 'data' : is not a member of 'std::vector<_Ty>'
+        with
+        [
+            _Ty=char
+        ]
+cap_mjpeg_encoder.cpp
+cap_images.cpp
+cap.cpp
+Generating Code...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\videoio\opencv_videoio.dir\Release\BuildLog.htm"
+opencv_videoio - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_highgui, Configuration: Release Win32 ------
+Compiling...
+opencv_highgui_pch.cpp
+Compiling...
+window_w32.cpp
+window.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\highgui\opencv_highgui.dir\Release\BuildLog.htm"
+opencv_highgui - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_flann, Configuration: Release Win32 ------
+Compiling...
+opencv_flann_pch.cpp
+Compiling...
+miniflann.cpp
+flann.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_flann300.lib and object ..\..\lib\Release\opencv_flann300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\flann\opencv_flann.dir\Release\BuildLog.htm"
+opencv_flann - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_ml, Configuration: Release Win32 ------
+Compiling...
+opencv_ml_pch.cpp
+Compiling...
+tree.cpp
+testset.cpp
+svm.cpp
+rtrees.cpp
+nbayes.cpp
+lr.cpp
+knearest.cpp
+kdtree.cpp
+inner_functions.cpp
+gbt.cpp
+em.cpp
+data.cpp
+boost.cpp
+ann_mlp.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_ml300.lib and object ..\..\lib\Release\opencv_ml300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\ml\opencv_ml.dir\Release\BuildLog.htm"
+opencv_ml - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_features2d, Configuration: Release Win32 ------
+Generating opencl_kernels_features2d.cpp, opencl_kernels_features2d.hpp
+Compiling...
+opencv_features2d_pch.cpp
+Compiling...
+opencl_kernels_features2d.cpp
+nldiffusion_functions.cpp
+KAZEFeatures.cpp
+fed.cpp
+AKAZEFeatures.cpp
+orb.cpp
+mser.cpp
+matchers.cpp
+keypoint.cpp
+kaze.cpp
+gftt.cpp
+feature2d.cpp
+fast_score.cpp
+fast.cpp
+evaluation.cpp
+dynamic.cpp
+draw.cpp
+brisk.cpp
+blobdetector.cpp
+bagofwords.cpp
+Generating Code...
+Compiling...
+akaze.cpp
+agast_score.cpp
+agast.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\features2d\opencv_features2d.dir\Release\BuildLog.htm"
+opencv_features2d - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_photo, Configuration: Release Win32 ------
+Generating opencl_kernels_photo.cpp, opencl_kernels_photo.hpp
+Compiling...
+opencv_photo_pch.cpp
+Compiling...
+opencl_kernels_photo.cpp
+tonemap.cpp
+seamless_cloning_impl.cpp
+seamless_cloning.cpp
+npr.cpp
+merge.cpp
+inpaint.cpp
+hdr_common.cpp
+denoising.cuda.cpp
+denoising.cpp
+denoise_tvl1.cpp
+contrast_preserve.cpp
+calibrate.cpp
+align.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_photo300.lib and object ..\..\lib\Release\opencv_photo300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\photo\opencv_photo.dir\Release\BuildLog.htm"
+opencv_photo - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_video, Configuration: Release Win32 ------
+Generating opencl_kernels_video.cpp, opencl_kernels_video.hpp
+Compiling...
+opencv_video_pch.cpp
+Compiling...
+opencl_kernels_video.cpp
+tvl1flow.cpp
+optflowgf.cpp
+lkpyramid.cpp
+kalman.cpp
+ecc.cpp
+compat_video.cpp
+camshift.cpp
+bgfg_KNN.cpp
+bgfg_gaussmix2.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_video300.lib and object ..\..\lib\Release\opencv_video300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\video\opencv_video.dir\Release\BuildLog.htm"
+opencv_video - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_calib3d, Configuration: Release Win32 ------
+Generating opencl_kernels_calib3d.cpp, opencl_kernels_calib3d.hpp
+Compiling...
+opencv_calib3d_pch.cpp
+Compiling...
+opencl_kernels_calib3d.cpp
+upnp.cpp
+triangulate.cpp
+stereosgbm.cpp
+stereobm.cpp
+solvepnp.cpp
+rho.cpp
+quadsubpix.cpp
+ptsetreg.cpp
+posit.cpp
+polynom_solver.cpp
+p3p.cpp
+levmarq.cpp
+homography_decomp.cpp
+fundam.cpp
+five-point.cpp
+fisheye.cpp
+epnp.cpp
+dls.cpp
+compat_stereo.cpp
+Generating Code...
+Compiling...
+compat_ptsetreg.cpp
+circlesgrid.cpp
+checkchessboard.cpp
+calibration.cpp
+calibinit.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\calib3d\opencv_calib3d.dir\Release\BuildLog.htm"
+opencv_calib3d - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_objdetect, Configuration: Release Win32 ------
+Generating opencl_kernels_objdetect.cpp, opencl_kernels_objdetect.hpp
+Compiling...
+opencv_objdetect_pch.cpp
+Compiling...
+opencl_kernels_objdetect.cpp
+hog.cpp
+haar.cpp
+detection_based_tracker.cpp
+cascadedetect_convert.cpp
+cascadedetect.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\objdetect\opencv_objdetect.dir\Release\BuildLog.htm"
+opencv_objdetect - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_shape, Configuration: Release Win32 ------
+Compiling...
+opencv_shape_pch.cpp
+Compiling...
+tps_trans.cpp
+sc_dis.cpp
+precomp.cpp
+hist_cost.cpp
+haus_dis.cpp
+emdL1.cpp
+aff_trans.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\lib\Release\opencv_shape300.lib and object ..\..\lib\Release\opencv_shape300.exp
+Embedding manifest...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\shape\opencv_shape.dir\Release\BuildLog.htm"
+opencv_shape - 0 error(s), 0 warning(s)
+------ Build started: Project: opencv_stitching, Configuration: Release Win32 ------
+Generating opencl_kernels_stitching.cpp, opencl_kernels_stitching.hpp
+Compiling...
+opencv_stitching_pch.cpp
+Compiling...
+opencl_kernels_stitching.cpp
+warpers_cuda.cpp
+warpers.cpp
+util.cpp
+timelapsers.cpp
+stitcher.cpp
+seam_finders.cpp
+motion_estimators.cpp
+matchers.cpp
+exposure_compensate.cpp
+camera.cpp
+blenders.cpp
+autocalib.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\stitching\opencv_stitching.dir\Release\BuildLog.htm"
+opencv_stitching - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_superres, Configuration: Release Win32 ------
+Generating opencl_kernels_superres.cpp, opencl_kernels_superres.hpp
+Compiling...
+opencv_superres_pch.cpp
+Compiling...
+opencl_kernels_superres.cpp
+super_resolution.cpp
+optical_flow.cpp
+input_array_utility.cpp
+frame_source.cpp
+btv_l1_cuda.cpp
+btv_l1.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\superres\opencv_superres.dir\Release\BuildLog.htm"
+opencv_superres - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_videostab, Configuration: Release Win32 ------
+Compiling...
+opencv_videostab_pch.cpp
+Compiling...
+wobble_suppression.cpp
+stabilizer.cpp
+outlier_rejection.cpp
+optical_flow.cpp
+motion_stabilizing.cpp
+log.cpp
+inpainting.cpp
+global_motion.cpp
+frame_source.cpp
+fast_marching.cpp
+deblurring.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\videostab\opencv_videostab.dir\Release\BuildLog.htm"
+opencv_videostab - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_createsamples, Configuration: Release Win32 ------
+Compiling...
+utility.cpp
+createsamples.cpp
+Generating Code...
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_objdetect300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\createsamples\opencv_createsamples.dir\Release\BuildLog.htm"
+opencv_createsamples - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_traincascade, Configuration: Release Win32 ------
+Compiling...
+traincascade.cpp
+old_ml_tree.cpp
+old_ml_inner_functions.cpp
+old_ml_data.cpp
+old_ml_boost.cpp
+lbpfeatures.cpp
+imagestorage.cpp
+HOGfeatures.cpp
+haarfeatures.cpp
+features.cpp
+cascadeclassifier.cpp
+boost.cpp
+Generating Code...
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_objdetect300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\traincascade\opencv_traincascade.dir\Release\BuildLog.htm"
+opencv_traincascade - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_python2, Configuration: Release Win32 ------
+Generating pyopencv_generated_include.h, pyopencv_generated_funcs.h, pyopencv_generated_types.h, pyopencv_generated_type_reg.h, pyopencv_generated_ns_reg.h
+Compiling...
+cv2.cpp
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C2039: 'DETECTED' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C2065: 'DETECTED' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C2039: 'DETECTED' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C2065: 'DETECTED' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C2039: 'DETECTED_NOT_SHOWN_YET' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C2065: 'DETECTED_NOT_SHOWN_YET' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C2039: 'DETECTED_NOT_SHOWN_YET' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C2065: 'DETECTED_NOT_SHOWN_YET' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C2039: 'DETECTED_TEMPORARY_LOST' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C2065: 'DETECTED_TEMPORARY_LOST' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C2039: 'DETECTED_TEMPORARY_LOST' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C2065: 'DETECTED_TEMPORARY_LOST' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C2039: 'WRONG_OBJECT' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C2065: 'WRONG_OBJECT' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C2039: 'WRONG_OBJECT' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C2065: 'WRONG_OBJECT' : undeclared identifier
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\opencv_python2.dir\Release\BuildLog.htm"
+opencv_python2 - 24 error(s), 0 warning(s)
+------ Build started: Project: opencv_annotation, Configuration: Release Win32 ------
+Compiling...
+opencv_annotation.cpp
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_highgui300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\annotation\opencv_annotation.dir\Release\BuildLog.htm"
+opencv_annotation - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_ts, Configuration: Release Win32 ------
+Compiling...
+opencv_ts_pch.cpp
+Compiling...
+ts_perf.cpp
+ts_gtest.cpp
+ts_func.cpp
+ts_arrtest.cpp
+ts.cpp
+ocl_test.cpp
+ocl_perf.cpp
+cuda_test.cpp
+cuda_perf.cpp
+Generating Code...
+Creating library...
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\ts\opencv_ts.dir\Release\BuildLog.htm"
+opencv_ts - 0 error(s), 0 warning(s)
+========== Build: 17 succeeded, 12 failed, 2 up-to-date, 0 skipped ==========
+
+Microsoft (R) Visual Studio Version 9.0.21022.8.
+Copyright (C) Microsoft Corp. All rights reserved.
+------ Build started: Project: opencv_videoio, Configuration: Release Win32 ------
+Compiling...
+cap_mjpeg_decoder.cpp
+..\..\..\modules\videoio\src\cap_mjpeg_decoder.cpp(793) : error C2039: 'data' : is not a member of 'std::vector<_Ty>'
+        with
+        [
+            _Ty=char
+        ]
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\videoio\opencv_videoio.dir\Release\BuildLog.htm"
+opencv_videoio - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_highgui, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\highgui\opencv_highgui.dir\Release\BuildLog.htm"
+opencv_highgui - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_features2d, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\features2d\opencv_features2d.dir\Release\BuildLog.htm"
+opencv_features2d - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_objdetect, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\objdetect\opencv_objdetect.dir\Release\BuildLog.htm"
+opencv_objdetect - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_calib3d, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\calib3d\opencv_calib3d.dir\Release\BuildLog.htm"
+opencv_calib3d - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_videostab, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\videostab\opencv_videostab.dir\Release\BuildLog.htm"
+opencv_videostab - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_stitching, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\stitching\opencv_stitching.dir\Release\BuildLog.htm"
+opencv_stitching - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_superres, Configuration: Release Win32 ------
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_videoio300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\superres\opencv_superres.dir\Release\BuildLog.htm"
+opencv_superres - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_createsamples, Configuration: Release Win32 ------
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_objdetect300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\createsamples\opencv_createsamples.dir\Release\BuildLog.htm"
+opencv_createsamples - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_traincascade, Configuration: Release Win32 ------
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_objdetect300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\traincascade\opencv_traincascade.dir\Release\BuildLog.htm"
+opencv_traincascade - 1 error(s), 0 warning(s)
+------ Build started: Project: opencv_python2, Configuration: Release Win32 ------
+Compiling...
+cv2.cpp
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C2039: 'DETECTED' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(930) : error C2065: 'DETECTED' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C2039: 'DETECTED' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(931) : error C2065: 'DETECTED' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C2039: 'DETECTED_NOT_SHOWN_YET' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(932) : error C2065: 'DETECTED_NOT_SHOWN_YET' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C2039: 'DETECTED_NOT_SHOWN_YET' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(933) : error C2065: 'DETECTED_NOT_SHOWN_YET' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C2039: 'DETECTED_TEMPORARY_LOST' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(934) : error C2065: 'DETECTED_TEMPORARY_LOST' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C2039: 'DETECTED_TEMPORARY_LOST' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(935) : error C2065: 'DETECTED_TEMPORARY_LOST' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C2039: 'WRONG_OBJECT' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(936) : error C2065: 'WRONG_OBJECT' : undeclared identifier
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C3083: 'DetectionBasedTracker': the symbol to the left of a '::' must be a type
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C2039: 'WRONG_OBJECT' : is not a member of 'cv'
+c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\pyopencv_generated_ns_reg.h(937) : error C2065: 'WRONG_OBJECT' : undeclared identifier
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\modules\python2\opencv_python2.dir\Release\BuildLog.htm"
+opencv_python2 - 24 error(s), 0 warning(s)
+------ Build started: Project: opencv_annotation, Configuration: Release Win32 ------
+Performing Pre-Link Event...
+Linking...
+LINK : fatal error LNK1181: cannot open input file '..\..\lib\Release\opencv_highgui300.lib'
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\apps\annotation\opencv_annotation.dir\Release\BuildLog.htm"
+opencv_annotation - 1 error(s), 0 warning(s)
+------ Build started: Project: INSTALL, Configuration: Release Win32 ------
+ 
+Performing Post-Build Event...
+-- Install configuration: "Release"
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/staticlib/ippicvmt.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/cvconfig.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/opencv_modules.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/OpenCVConfig.cmake
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/OpenCVModules.cmake
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/OpenCVModules-release.cmake
+-- Installing: C:/Anaconda/32/envs/_build/Library/OpenCVConfig-version.cmake
+-- Installing: C:/Anaconda/32/envs/_build/Library/OpenCVConfig.cmake
+-- Installing: C:/Anaconda/32/envs/_build/Library/LICENSE
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cv.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cv.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cvaux.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cvaux.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cvwimage.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cxcore.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cxcore.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cxeigen.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/cxmisc.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/highgui.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv/ml.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/opencv.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_hal300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal/intrin.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal/intrin_cpp.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal/intrin_neon.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal/intrin_sse.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/hal/defs.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_core300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_core300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/block.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/border_interpolate.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/color.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/common.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/datamov_utils.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/dynamic_smem.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/emulation.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/filters.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/funcattrib.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/functional.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/limits.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/reduce.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/saturate_cast.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/scan.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/simd_functions.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/transform.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/type_traits.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/utility.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/vec_distance.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/vec_math.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/vec_traits.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/warp.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/warp_reduce.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/warp_shuffle.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/color_detail.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/reduce.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/reduce_key_val.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/transform_detail.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/type_traits_detail.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda/detail/vec_distance_detail.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/affine.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/base.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/bufferpool.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/core.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda.inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda_stream_accessor.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cuda_types.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cvstd.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cvstd.inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/directx.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/eigen.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/ippasync.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/mat.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/mat.inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/matx.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/ocl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/ocl_genbase.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/opengl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/operations.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/optim.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/persistence.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/private.cuda.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/private.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/ptr.inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/sse_utils.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/traits.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/types.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/utility.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/version.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/wimage.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/core_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/cvdef.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/core/types_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_flann300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_flann300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/flann.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/flann_base.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/miniflann.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/allocator.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/all_indices.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/any.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/autotuned_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/composite_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/config.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/defines.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/dist.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/dummy.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/dynamic_bitset.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/general.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/ground_truth.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/hdf5.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/heap.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/hierarchical_clustering_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/index_testing.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/kdtree_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/kdtree_single_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/kmeans_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/linear_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/logger.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/lsh_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/lsh_table.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/matrix.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/nn_index.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/object_factory.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/params.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/random.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/result_set.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/sampling.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/saving.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/simplex_downhill.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/flann/timer.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_imgproc300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_imgproc300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgproc.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgproc/imgproc.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgproc/imgproc_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgproc/types_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_ml300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_ml300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/ml.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/ml/ml.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_photo300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_photo300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/photo.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/photo/cuda.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/photo/photo.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/photo/photo_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_video300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_video300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/video.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/video/background_segm.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/video/tracking.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/video/video.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/video/tracking_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_imgcodecs300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_imgcodecs300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgcodecs.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgcodecs/imgcodecs.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgcodecs/imgcodecs_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/imgcodecs/ios.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_shape300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/bin/opencv_shape300.dll
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape/emdL1.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape/hist_cost.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape/shape.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape/shape_distance.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/shape/shape_transformer.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videoio.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videoio/videoio.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videoio/cap_ios.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videoio/videoio_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/highgui.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/highgui/highgui.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/highgui/highgui_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/objdetect.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/objdetect/detection_based_tracker.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/objdetect/objdetect.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/objdetect/objdetect_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/superres.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/superres/optical_flow.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/x86/vc9/lib/opencv_ts300.lib
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/features2d.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/features2d/features2d.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/calib3d.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/calib3d/calib3d.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/calib3d/calib3d_c.h
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/warpers.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/autocalib.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/blenders.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/camera.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/exposure_compensate.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/matchers.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/motion_estimators.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/seam_finders.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/timelapsers.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/util.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/util_inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/warpers.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/stitching/detail/warpers_inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/deblurring.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/fast_marching.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/fast_marching_inl.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/frame_source.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/global_motion.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/inpainting.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/log.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/motion_core.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/motion_stabilizing.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/optical_flow.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/outlier_rejection.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/ring_buffer.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/stabilizer.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/include/opencv2/videostab/wobble_suppression.hpp
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_eye.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_eye_tree_eyeglasses.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalcatface.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalcatface_extended.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalface_alt.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalface_alt2.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalface_alt_tree.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_frontalface_default.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_fullbody.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_lefteye_2splits.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_licence_plate_rus_16stages.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_lowerbody.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_profileface.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_righteye_2splits.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_russian_plate_number.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_smile.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/haarcascades/haarcascade_upperbody.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/lbpcascades/lbpcascade_frontalcatface.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/lbpcascades/lbpcascade_frontalface.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/lbpcascades/lbpcascade_profileface.xml
+-- Installing: C:/Anaconda/32/envs/_build/Library/etc/lbpcascades/lbpcascade_silverware.xml
+CMake Error at apps/annotation/cmake_install.cmake:34 (FILE):
+  file INSTALL cannot find
+  "C:/Anaconda/32/conda-bld/work/opencv-3.0.0/build/bin/Release/opencv_annotation.exe".
+Call Stack (most recent call first):
+  apps/cmake_install.cmake:34 (INCLUDE)
+  cmake_install.cmake:117 (INCLUDE)
+Project : error PRJ0019: A tool returned an error code from "Performing Post-Build Event..."
+Build log was saved at "file://c:\Anaconda\32\conda-bld\work\opencv-3.0.0\build\INSTALL.dir\Release\BuildLog.htm"
+INSTALL - 1 error(s), 0 warning(s)
+========== Build: 0 succeeded, 13 failed, 19 up-to-date, 0 skipped ==========
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_core300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_flann300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_imgcodecs300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_imgproc300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_ml300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_photo300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_shape300.dll
+C:\Anaconda\32\envs\_build\Library\x86\vc9\bin\opencv_video300.dll
+        8 file(s) moved.
+A duplicate file name exists, or the file
+cannot be found.
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_core300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_flann300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_hal300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_imgcodecs300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_imgproc300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_ml300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_photo300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_shape300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_ts300.lib
+C:\Anaconda\32\envs\_build\Library\x86\vc9\lib\opencv_video300.lib
+       10 file(s) moved.
+C:\Anaconda\32\envs\_build\Library\lib\opencv_core300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_flann300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_imgcodecs300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_imgproc300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_ml300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_photo300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_shape300.dll
+C:\Anaconda\32\envs\_build\Library\lib\opencv_video300.dll
+8 File(s) copied
+
+The following NEW packages will be INSTALLED:
+
+    cmake:      2.8.12.2-0   
+    eigen:      3.2.2-0      
+    msinttypes: r26-0        
+    numpy:      1.9.2-py27_0 
+    pip:        7.1.0-py27_0 
+    python:     2.7.10-0     
+    setuptools: 18.0.1-py27_0
+
+Linking packages ...
+[                    ]|                                                  |   0%[cmake               ]|                                                  |   0%[eigen               ]|#######                                           |  14%[msinttypes          ]|##############                                    |  28%[numpy               ]|#####################                             |  42%[python              ]|############################                      |  57%[setuptools          ]|###################################               |  71%[pip                 ]|##########################################        |  85%[      COMPLETE      ]|##################################################| 100%
+Removing old work directory
+Source cache directory is: C:\Anaconda\32\conda-bld\src_cache
+Found source in cache: opencv-3.0.0.tar.gz
+Extracting download
+Package: opencv-3.0-np19py27_0
+source tree in: C:\Anaconda\32\conda-bld\work\opencv-3.0.0
+number of files: 244
+Fixing permissions
+Ignored hard-coded path in Lib/site-packages/opencv_core300.dll
+Ignored hard-coded path in Library/lib/opencv_core300.dll
+Ignored hard-coded path in Library/lib/opencv_hal300.lib
+Ignored hard-coded path in Library/lib/opencv_ts300.lib
+Fixing permissions
+BUILD END: opencv-3.0-np19py27_0
+TEST START: opencv-3.0-np19py27_0
+Fetching package metadata: ........
+Solving package specifications: .
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    opencv-3.0                 |       np19py27_0        16.6 MB
+
+The following NEW packages will be INSTALLED:
+
+    numpy:      1.9.2-py27_0  
+    opencv:     3.0-np19py27_0
+    pip:        7.1.0-py27_0  
+    python:     2.7.10-0      
+    setuptools: 18.0.1-py27_0 
+
+Fetching packages ...
+opencv-3.0-np1   0% |                              | ETA:  --:--:--   0.00  B/sopencv-3.0-np1   1% |                               | ETA:  0:00:01  11.26 MB/sopencv-3.0-np1   2% |                               | ETA:  0:00:00  22.53 MB/sopencv-3.0-np1   3% |                               | ETA:  0:00:00  33.79 MB/sopencv-3.0-np1   4% |#                              | ETA:  0:00:00  45.06 MB/sopencv-3.0-np1   5% |#                              | ETA:  0:00:00  56.32 MB/sopencv-3.0-np1   6% |#                              | ETA:  0:00:00  67.58 MB/sopencv-3.0-np1   7% |##                             | ETA:  0:00:00  78.85 MB/sopencv-3.0-np1   8% |##                             | ETA:  0:00:00  90.11 MB/sopencv-3.0-np1   9% |##                             | ETA:  0:00:00  50.69 MB/sopencv-3.0-np1  10% |###                            | ETA:  0:00:00  56.32 MB/sopencv-3.0-np1  11% |###                            | ETA:  0:00:00  61.95 MB/sopencv-3.0-np1  12% |###                            | ETA:  0:00:00  67.58 MB/sopencv-3.0-np1  13% |####                           | ETA:  0:00:00  73.22 MB/sopencv-3.0-np1  14% |####                           | ETA:  0:00:00  78.85 MB/sopencv-3.0-np1  15% |####                           | ETA:  0:00:00  84.48 MB/sopencv-3.0-np1  16% |#####                          | ETA:  0:00:00  90.11 MB/sopencv-3.0-np1  17% |#####                          | ETA:  0:00:00  95.74 MB/sopencv-3.0-np1  18% |#####                          | ETA:  0:00:00 101.38 MB/sopencv-3.0-np1  19% |######                         | ETA:  0:00:00 107.01 MB/sopencv-3.0-np1  20% |######                         | ETA:  0:00:00  76.69 MB/sopencv-3.0-np1  21% |######                         | ETA:  0:00:00  80.53 MB/sopencv-3.0-np1  22% |#######                        | ETA:  0:00:00  84.36 MB/sopencv-3.0-np1  23% |#######                        | ETA:  0:00:00  88.19 MB/sopencv-3.0-np1  24% |#######                        | ETA:  0:00:00  92.03 MB/sopencv-3.0-np1  25% |########                       | ETA:  0:00:00  95.86 MB/sopencv-3.0-np1  26% |########                       | ETA:  0:00:00  99.70 MB/sopencv-3.0-np1  27% |########                       | ETA:  0:00:00 103.53 MB/sopencv-3.0-np1  29% |########                       | ETA:  0:00:00 107.37 MB/sopencv-3.0-np1  30% |#########                      | ETA:  0:00:00  82.96 MB/sopencv-3.0-np1  31% |#########                      | ETA:  0:00:00  85.82 MB/sopencv-3.0-np1  32% |#########                      | ETA:  0:00:00  88.68 MB/sopencv-3.0-np1  33% |##########                     | ETA:  0:00:00  91.54 MB/sopencv-3.0-np1  34% |##########                     | ETA:  0:00:00  94.40 MB/sopencv-3.0-np1  35% |##########                     | ETA:  0:00:00  97.26 MB/sopencv-3.0-np1  36% |###########                    | ETA:  0:00:00 100.12 MB/sopencv-3.0-np1  37% |###########                    | ETA:  0:00:00 102.99 MB/sopencv-3.0-np1  38% |###########                    | ETA:  0:00:00 105.85 MB/sopencv-3.0-np1  39% |############                   | ETA:  0:00:00 108.71 MB/sopencv-3.0-np1  40% |############                   | ETA:  0:00:00 111.57 MB/sopencv-3.0-np1  41% |############                   | ETA:  0:00:00  92.42 MB/sopencv-3.0-np1  42% |#############                  | ETA:  0:00:00  94.73 MB/sopencv-3.0-np1  43% |#############                  | ETA:  0:00:00  97.04 MB/sopencv-3.0-np1  44% |#############                  | ETA:  0:00:00  99.35 MB/sopencv-3.0-np1  45% |##############                 | ETA:  0:00:00 101.66 MB/sopencv-3.0-np1  46% |##############                 | ETA:  0:00:00 103.98 MB/sopencv-3.0-np1  47% |##############                 | ETA:  0:00:00 106.29 MB/sopencv-3.0-np1  48% |###############                | ETA:  0:00:00 108.60 MB/sopencv-3.0-np1  49% |###############                | ETA:  0:00:00 110.91 MB/sopencv-3.0-np1  50% |###############                | ETA:  0:00:00 113.22 MB/sopencv-3.0-np1  51% |################               | ETA:  0:00:00  95.86 MB/sopencv-3.0-np1  52% |################               | ETA:  0:00:00  97.78 MB/sopencv-3.0-np1  53% |################               | ETA:  0:00:00  99.70 MB/sopencv-3.0-np1  54% |#################              | ETA:  0:00:00 101.62 MB/sopencv-3.0-np1  55% |#################              | ETA:  0:00:00 103.53 MB/sopencv-3.0-np1  57% |#################              | ETA:  0:00:00 105.45 MB/sopencv-3.0-np1  58% |#################              | ETA:  0:00:00 107.37 MB/sopencv-3.0-np1  59% |##################             | ETA:  0:00:00 109.28 MB/sopencv-3.0-np1  60% |##################             | ETA:  0:00:00 111.20 MB/sopencv-3.0-np1  61% |##################             | ETA:  0:00:00  96.67 MB/sopencv-3.0-np1  62% |###################            | ETA:  0:00:00  98.30 MB/sopencv-3.0-np1  63% |###################            | ETA:  0:00:00  99.94 MB/sopencv-3.0-np1  64% |###################            | ETA:  0:00:00 101.58 MB/sopencv-3.0-np1  65% |####################           | ETA:  0:00:00 103.22 MB/sopencv-3.0-np1  66% |####################           | ETA:  0:00:00 104.86 MB/sopencv-3.0-np1  67% |####################           | ETA:  0:00:00 106.50 MB/sopencv-3.0-np1  68% |#####################          | ETA:  0:00:00 108.13 MB/sopencv-3.0-np1  69% |#####################          | ETA:  0:00:00 109.77 MB/sopencv-3.0-np1  70% |#####################          | ETA:  0:00:00  98.04 MB/sopencv-3.0-np1  71% |######################         | ETA:  0:00:00  99.48 MB/sopencv-3.0-np1  72% |######################         | ETA:  0:00:00 100.93 MB/sopencv-3.0-np1  73% |######################         | ETA:  0:00:00 102.37 MB/sopencv-3.0-np1  74% |#######################        | ETA:  0:00:00 103.81 MB/sopencv-3.0-np1  75% |#######################        | ETA:  0:00:00 105.25 MB/sopencv-3.0-np1  76% |#######################        | ETA:  0:00:00 106.69 MB/sopencv-3.0-np1  77% |########################       | ETA:  0:00:00 108.13 MB/sopencv-3.0-np1  78% |########################       | ETA:  0:00:00 109.58 MB/sopencv-3.0-np1  79% |########################       | ETA:  0:00:00 111.02 MB/sopencv-3.0-np1  80% |#########################      | ETA:  0:00:00 112.46 MB/sopencv-3.0-np1  81% |#########################      | ETA:  0:00:00 100.98 MB/sopencv-3.0-np1  82% |#########################      | ETA:  0:00:00 102.25 MB/sopencv-3.0-np1  83% |##########################     | ETA:  0:00:00 103.53 MB/sopencv-3.0-np1  85% |##########################     | ETA:  0:00:00 104.81 MB/sopencv-3.0-np1  86% |##########################     | ETA:  0:00:00 106.09 MB/sopencv-3.0-np1  87% |##########################     | ETA:  0:00:00 107.37 MB/sopencv-3.0-np1  88% |###########################    | ETA:  0:00:00 108.65 MB/sopencv-3.0-np1  89% |###########################    | ETA:  0:00:00 109.92 MB/sopencv-3.0-np1  90% |###########################    | ETA:  0:00:00 111.20 MB/sopencv-3.0-np1  91% |############################   | ETA:  0:00:00 112.48 MB/sopencv-3.0-np1  92% |############################   | ETA:  0:00:00 102.17 MB/sopencv-3.0-np1  93% |############################   | ETA:  0:00:00 103.31 MB/sopencv-3.0-np1  94% |#############################  | ETA:  0:00:00  95.35 MB/sopencv-3.0-np1  95% |#############################  | ETA:  0:00:00  96.40 MB/sopencv-3.0-np1  96% |#############################  | ETA:  0:00:00  97.45 MB/sopencv-3.0-np1  97% |############################## | ETA:  0:00:00  98.49 MB/sopencv-3.0-np1  98% |############################## | ETA:  0:00:00  99.54 MB/sopencv-3.0-np1  99% |############################## | ETA:  0:00:00 100.59 M===== testing package: opencv-3.0-np19py27_0 =====
+import: u'cv2'
+Traceback (most recent call last):
+  File "C:\Anaconda\32\conda-bld\test-tmp_dir\run_test.py", line 25, in <module>
+    import cv2
+ImportError: No module named cv2
+B/sopencv-3.0-np1 100% |###############################| Time: 0:00:00 101.08 MB/s
+Extracting packages ...
+[      COMPLETE      ]|                                                  |   0%[opencv              ]|                                                  |   0%[opencv              ]|                                                  |   0%[      COMPLETE      ]|##################################################| 100%
+Linking packages ...
+[      COMPLETE      ]|                                                  |   0%[numpy               ]|                                                  |   0%[numpy               ]|                                                  |   0%[opencv              ]|##########                                        |  20%[python              ]|####################                              |  40%[setuptools          ]|##############################                    |  60%[pip                 ]|########################################          |  80%[      COMPLETE      ]|##################################################| 100%
+
+WARNING: conda-build appears to be out of date. You have version 1.15.0 but the
+latest version is 1.16.0. Run
+
+conda update -n root conda-build
+
+to get the latest version.
+
+
+WARNING: conda-build appears to be out of date. You have version 1.15.0 but the
+latest version is 1.16.0. Run
+
+conda update -n root conda-build
+
+to get the latest version.
+
+TESTS FAILED: opencv-3.0-np19py27_0
