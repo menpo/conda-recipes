@@ -14,7 +14,8 @@ source:
 requirements:
   build:
    - python
-   - cmake  # [win]
+   - wget 1.16.3  # [win]
+   - cmake 3.3.0  # [win]
    - numpy
    - eigen
    - tbb  # [osx]

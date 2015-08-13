@@ -37,26 +37,46 @@ set PY_SP_DIR=%PY_SP_DIR:\=/%
 set PY_EXEC="%PYTHON%"
 set PY_EXEC=%PY_EXEC:\=/%
 
-cmake .. -G%CMAKE_GENERATOR%                        ^
-    -DWITH_EIGEN=1                                  ^
-    -DBUILD_TESTS=0                                 ^
-    -DBUILD_DOCS=0                                  ^
-    -DBUILD_PERF_TESTS=0                            ^
-    -DBUILD_ZLIB=1                                  ^
-    -DBUILD_TIFF=1                                  ^
-    -DBUILD_PNG=1                                   ^
-    -DBUILD_OPENEXR=1                               ^
-    -DBUILD_JASPER=1                                ^
-    -DBUILD_JPEG=1                                  ^
-    -DWITH_CUDA=0                                   ^
-    -DWITH_OPENCL=0                                 ^
-    -DWITH_OPENNI=0                                 ^
-    -DWITH_FFMPEG=0                                 ^
-    -DPYTHON2_EXECUTABLE=%PY_EXEC%                  ^
-    -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH%         ^
-    -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH%         ^
-    -DPYTHON2_LIBRARY=%PY_LIBRARY%                  ^
-    -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%             ^
+rem wget the contrib package
+rem "%LIBRARY_BIN%\wget.exe" -O contrib.tar.gz https://github.com/Itseez/opencv_contrib/archive/3.0.0.tar.gz --no-check-certificate
+rem Copy a cached version for speed
+copy ..\..\..\src_cache\contrib.tar.gz contrib.tar.gz
+rem if [ $(shasum -a 256 "contrib.tar.gz") != "8fa18564447a821318e890c7814a262506dd72aaf7721c5afcf733e413d2e12b" ]; then
+rem     exit 1
+rem fi
+tar -xzf contrib.tar.gz
+rem Seems to be some error with a pow overload - so I just patch it here.
+patch -p0 < %RECIPE_DIR%\binary_descriptor.patch
+patch -p0 < %RECIPE_DIR%\bitops.patch
+patch -p0 < %RECIPE_DIR%\daisy.patch
+patch -p0 < %RECIPE_DIR%\lsddetector_pow.patch
+patch -p0 < %RECIPE_DIR%\saliency.patch
+patch -p0 < %RECIPE_DIR%\seeds.patch
+
+rem The bioinspired contrib module is disabled due to an error
+rem about l values on line (458)
+cmake .. -G%CMAKE_GENERATOR%                                   ^
+    -DWITH_EIGEN=1                                             ^
+    -DBUILD_TESTS=0                                            ^
+    -DBUILD_DOCS=0                                             ^
+    -DBUILD_PERF_TESTS=0                                       ^
+    -DBUILD_ZLIB=1                                             ^
+    -DBUILD_TIFF=1                                             ^
+    -DBUILD_PNG=1                                              ^
+    -DBUILD_OPENEXR=1                                          ^
+    -DBUILD_JASPER=1                                           ^
+    -DBUILD_JPEG=1                                             ^
+    -DWITH_CUDA=0                                              ^
+    -DWITH_OPENCL=0                                            ^
+    -DWITH_OPENNI=0                                            ^
+    -DWITH_FFMPEG=0                                            ^
+    -DPYTHON2_EXECUTABLE=%PY_EXEC%                             ^
+    -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH%                    ^
+    -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH%                    ^
+    -DPYTHON2_LIBRARY=%PY_LIBRARY%                             ^
+    -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%                        ^
+    -DOPENCV_EXTRA_MODULES_PATH="opencv_contrib-3.0.0\modules" ^
+    -DBUILD_opencv_bioinspired=0                               ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"
 
 cmake --build . --config %CMAKE_CONFIG% --target ALL_BUILD

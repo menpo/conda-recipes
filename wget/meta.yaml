@@ -1,0 +1,15 @@
+package:
+  name: wget
+  version: 1.16.3
+
+source:
+  fn: wget.exe  # [win32]
+  url: https://eternallybored.org/misc/wget/wget.exe  # [win32]
+  md5: a50749e1dedb7b14b7087b0677cca11e  # [win32]
+  fn: wget.exe  # [win64]
+  url: https://eternallybored.org/misc/wget/wget64.exe  # [win64]
+  md5: 1750c130c5daca8b347d3f7e34824c9b  # [win64] 
+
+about:
+  home: https://eternallybored.org/misc/wget/
+  license: GPL
