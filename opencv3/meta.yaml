@@ -10,7 +10,8 @@ source:
   patches:
     - cap_mpjpeg_decoder.patch  # [win]
     - detection_based_filter.patch  # [win]
-    - python3.patch  # [win and py3k]
+    - python3.patch  # [win and py34]
+    - python2.patch  # [win and py27]
 
 requirements:
   build:

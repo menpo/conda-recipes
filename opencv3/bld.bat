@@ -47,7 +47,7 @@ set PY_EXEC=%PY_EXEC:\=/%
 if %PY3K%==1 (
   set OCV_PYTHON="-DBUILD_opencv_python3=1 -DPYTHON_EXECUTABLE=%PY_EXEC%"
 ) else (
-  set OCV_PYTHON="-DBUILD_opencv_python2=1 -DPYTHON2_EXECUTABLE=%PY_EXEC% -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH% -DPYTHON2_LIBRARY=%PY_LIBRARY% -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH% -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%"
+  set OCV_PYTHON="-DBUILD_opencv_python2=1 -DPYTHON_EXECUTABLE=%PY_EXEC%"
 )
 
 rem wget the contrib package
@@ -65,12 +65,9 @@ patch -p0 < %RECIPE_DIR%\daisy.patch
 patch -p0 < %RECIPE_DIR%\lsddetector_pow.patch
 patch -p0 < %RECIPE_DIR%\saliency.patch
 patch -p0 < %RECIPE_DIR%\seeds.patch
+patch -p0 < %RECIPE_DIR%\transientareassegmentationmodule.patch
 
-rem The bioinspired contrib module is disabled due to an error
-rem bioinspired\src\transientareassegmentationmodule.cpp
-rem Line 457
-rem C2102: '&' requires l-value
-cmake .. -LAH -G%CMAKE_GENERATOR%                              ^
+cmake .. -G%CMAKE_GENERATOR%                                   ^
     -DWITH_EIGEN=1                                             ^
     -DBUILD_TESTS=0                                            ^
     -DBUILD_DOCS=0                                             ^
@@ -87,7 +84,6 @@ cmake .. -LAH -G%CMAKE_GENERATOR%                              ^
     -DWITH_FFMPEG=0                                            ^
     %OCV_PYTHON%                                               ^
     -DOPENCV_EXTRA_MODULES_PATH="opencv_contrib-3.0.0\modules" ^
-    -DBUILD_opencv_bioinspired=0                               ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"
 
 cmake --build . --config %CMAKE_CONFIG% --target ALL_BUILD
