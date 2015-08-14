@@ -2,40 +2,53 @@
 
 echo "Copying stdint.h for windows"
 cp "%LIBRARY_INC%\stdint.h" "modules\videoio\src\stdint.h"
-cp "%LIBRARY_INC%\stdint.h" "modules\calib3d\src\stdint.h"
 
 mkdir build
 cd build
 
-rem Need to handle Python 3.x case at some point (Visual Studio 2010)
 if %ARCH%==32 (
+  set CMAKE_CONFIG="Release"
+  set OPENCV_ARCH=x86
+
   if %PY_VER% LSS 3 (
+    set OPENCV_VC=vc9
     set CMAKE_GENERATOR="Visual Studio 9 2008"
-    set CMAKE_CONFIG="Release|Win32"
-	set OPENCV_ARCH=x86
-	set OPENCV_VC=vc9
+  ) else (
+    set OPENCV_VC=vc10
+	set CMAKE_GENERATOR="Visual Studio 10"
   )
 )
 if %ARCH%==64 (
+  set CMAKE_CONFIG="Release"
+  set OPENCV_ARCH=x64
+
   if %PY_VER% LSS 3 (
+    set OPENCV_VC=vc9
     set CMAKE_GENERATOR="Visual Studio 9 2008 Win64"
-    set CMAKE_CONFIG="Release|x64"
-	set OPENCV_ARCH=x64
-	set OPENCV_VC=vc9
+  else (
+    set OPENCV_VC=vc10
+	set CMAKE_GENERATOR="Visual Studio 10 Win64"
   )
 )
 
+set PY_VER_NO_DOT=%PY_VER:.=%
+set PY_LIBRARY="%PREFIX%\libs\python%PY_VER_NO_DOT%.lib"
+set PY_LIBRARY=%PY_LIBRARY:\=/%
+
 set PY_INCLUDE_PATH="%PREFIX%\include"
 set PY_INCLUDE_PATH=%PY_INCLUDE_PATH:\=/%
-
-set PY_LIBRARY="%PREFIX%\libs\python27.lib"
-set PY_LIBRARY=%PY_LIBRARY:\=/%
 
 set PY_SP_DIR="%SP_DIR%"
 set PY_SP_DIR=%PY_SP_DIR:\=/%
 
 set PY_EXEC="%PYTHON%"
 set PY_EXEC=%PY_EXEC:\=/%
+
+if %PY3K%==1 (
+  set OCV_PYTHON="-DBUILD_opencv_python3=1 -DPYTHON_EXECUTABLE=%PY_EXEC%"
+) else (
+  set OCV_PYTHON="-DBUILD_opencv_python2=1 -DPYTHON2_EXECUTABLE=%PY_EXEC% -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH% -DPYTHON2_LIBRARY=%PY_LIBRARY% -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH% -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%"
+)
 
 rem wget the contrib package
 rem "%LIBRARY_BIN%\wget.exe" -O contrib.tar.gz https://github.com/Itseez/opencv_contrib/archive/3.0.0.tar.gz --no-check-certificate
@@ -54,8 +67,10 @@ patch -p0 < %RECIPE_DIR%\saliency.patch
 patch -p0 < %RECIPE_DIR%\seeds.patch
 
 rem The bioinspired contrib module is disabled due to an error
-rem about l values on line (458)
-cmake .. -G%CMAKE_GENERATOR%                                   ^
+rem bioinspired\src\transientareassegmentationmodule.cpp
+rem Line 457
+rem C2102: '&' requires l-value
+cmake .. -LAH -G%CMAKE_GENERATOR%                              ^
     -DWITH_EIGEN=1                                             ^
     -DBUILD_TESTS=0                                            ^
     -DBUILD_DOCS=0                                             ^
@@ -70,11 +85,7 @@ cmake .. -G%CMAKE_GENERATOR%                                   ^
     -DWITH_OPENCL=0                                            ^
     -DWITH_OPENNI=0                                            ^
     -DWITH_FFMPEG=0                                            ^
-    -DPYTHON2_EXECUTABLE=%PY_EXEC%                             ^
-    -DPYTHON2_INCLUDE_DIR=%PY_INCLUDE_PATH%                    ^
-    -DPYTHON_INCLUDE_DIR2=%PY_INCLUDE_PATH%                    ^
-    -DPYTHON2_LIBRARY=%PY_LIBRARY%                             ^
-    -DPYTHON2_PACKAGES_PATH=%PY_SP_DIR%                        ^
+    %OCV_PYTHON%                                               ^
     -DOPENCV_EXTRA_MODULES_PATH="opencv_contrib-3.0.0\modules" ^
     -DBUILD_opencv_bioinspired=0                               ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"

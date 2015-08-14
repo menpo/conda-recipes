@@ -1,6 +1,6 @@
 package:
-  name: opencv
-  version: 3.0
+  name: opencv3
+  version: 3.0.0
 
 source:
   fn: opencv-3.0.0.tar.gz
@@ -10,6 +10,7 @@ source:
   patches:
     - cap_mpjpeg_decoder.patch  # [win]
     - detection_based_filter.patch  # [win]
+    - python3.patch  # [win and py3k]
 
 requirements:
   build:
@@ -29,6 +30,7 @@ requirements:
 test:
   imports:
     - cv2
+    - cv2.xfeatures2d
 
 about:
   home: http://opencv.org/
