@@ -25,7 +25,7 @@ if %ARCH%==64 (
   if %PY_VER% LSS 3 (
     set OPENCV_VC=vc9
     set CMAKE_GENERATOR="Visual Studio 9 2008 Win64"
-  else (
+  ) else (
     set OPENCV_VC=vc10
 	set CMAKE_GENERATOR="Visual Studio 10 Win64"
   )
