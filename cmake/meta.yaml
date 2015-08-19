@@ -8,7 +8,13 @@ source:
   md5: 5fb1ff2e1156d0b851efc81a841e2807  # [win]
   fn: cmake_install.sh  # [linux]
   url: http://www.cmake.org/files/v3.3/cmake-3.3.0-Linux-x86_64.sh  # [linux]
-  md5: 324ab2e818b9ceab40edaf0828a07cc1  # [linux] 
+  md5: 324ab2e818b9ceab40edaf0828a07cc1  # [linux]
+  fn: cmake-3.3.0.tar.gz  # [osx]
+  url: http://www.cmake.org/files/v3.3/cmake-3.3.0.tar.gz  # [osx]
+  sha256: 857c2f755fe0794d038d6fa462a173d05b210ac2c07ff82f0af853acef231a34  # [osx] 
+
+build:
+  binary_relocation: False  # [osx]
 
 about:
   home: http://www.cmake.org/
