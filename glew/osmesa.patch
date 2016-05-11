@@ -1,0 +1,11 @@
+--- build/cmake/CMakeLists.txt
++++ build/cmake/CMakeLists.txt
+@@ -64,7 +64,7 @@
+     set (OSMESA_LIB_NAME OSMesa)
+   endif ()
+   add_definitions (-DGLEW_OSMESA)
+-  set (GLEW_LIBRARIES ${OSMESA_LIB_NAME} ${OPENGL_LIBRARIES})
++  set (GLEW_LIBRARIES ${OSMESA_LIB_NAME})
+ endif ()
+ 
+ #### GLEW ####

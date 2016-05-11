@@ -1,14 +1,19 @@
+{% set version = "1.13.0" %}
+
 package:
   name: glew
-  version: "1.10.0"
+  version: {{ version }}
 
 source:
-  fn: glew-1.10.0.zip
-  url: https://github.com/menpo/glew/archive/v1.10.0.zip
+  fn: glew-{{ version }}.tgz
+  url: http://sourceforge.net/projects/glew/files/glew/snapshots/glew-20151117.tgz/download
+
+  patches:
+    - osmesa.patch
 
 requirements:
   build:
-    - cmake [win]
+    - cmake
 
 about:
   home: http://glew.sourceforge.net/
