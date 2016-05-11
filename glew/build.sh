@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CFLAGS="-I/Users/pts08/gits/mesa/test/include"
-LDFLAGS="-L/Users/pts08/gits/mesa/test/lib"
+export CFLAGS="-I/vol/atlas/homes/pts08/gits/mesa/test/include"
+export LDFLAGS="-L/vol/atlas/homes/pts08/gits/mesa/test/lib"
 
 cd build
 
@@ -19,5 +19,11 @@ make -j$CPU_COUNT
 make install
 
 # Copy the libs just for testing
-cp $PREFIX/lib/libGLEW.dylib .
+if [ "$(uname -s)" == "Darwin" ]; then
+  cp $PREFIX/lib/libGLEW.dylib out/bin/
+else
+  cp /vol/atlas/homes/pts08/gits/mesa/test/lib/*.so* $PREFIX/lib/
+  patchelf --set-rpath '$ORIGIN/./' $PREFIX/lib/libGLEW.so
+  patchelf --set-rpath $PREFIX/lib out/bin/cmake-test
+fi
 out/bin/cmake-test
