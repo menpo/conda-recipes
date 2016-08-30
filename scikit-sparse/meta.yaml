@@ -1,0 +1,40 @@
+package:
+  name: scikit-sparse
+  version: "0.3.1"
+
+source:
+  fn: scikit-sparse-0.3.1.tar.gz
+  url: https://pypi.python.org/packages/7f/08/92b2dacd18dc399b2dd2e2c52089c78f68b550555b9baf9078c0d984c548/scikit-sparse-0.3.1.tar.gz
+  md5: 52ce31d626721184fbcb5da1063d14d7
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - scipy
+    - cython
+    - numpy >=1.9
+    - suitesparse 4.4.1
+
+  run:
+    - python
+    - setuptools
+    - scipy
+    - numpy >=1.9
+    - suitesparse 4.4.1
+
+test:
+  imports:
+    - scikits.sparse
+    - scikits.sparse.cholmod
+
+  requires:
+    - nose
+
+  commands:
+    - nosetests scikits.sparse.test_cholmod
+
+about:
+  home: http://pythonhosted.org/scikit-sparse/
+  license: BSD
+
