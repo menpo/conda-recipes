@@ -25,14 +25,14 @@ requirements:
 
 test:
   imports:
-    - scikits.sparse
-    - scikits.sparse.cholmod
+    - sksparse
+    - sksparse.cholmod
 
   requires:
     - nose
 
   commands:
-    - nosetests scikits.sparse.test_cholmod
+    - nosetests sksparse.test_cholmod
 
 about:
   home: http://pythonhosted.org/scikit-sparse/
